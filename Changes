@@ -1,0 +1,34 @@
+Changes for the CPAN Testers Blog website
+
+1.00    current
+        - upgrade to Labyrinth 5.04.
+        - upgrade to Labyrinth-Plugin-Core 5.06.
+        - upgrade to Labyrinth-Plugin-Articles-Diary 1.00.
+        - upgrade to Labyrinth-Plugin-Event 1.00.
+        - packaged for CPAN release.
+
+0.06	20/11/2010
+	- user lists now hide special users (Guest), restrict access to users
+	  of the same or higher access, and prevent priveledged users from
+	  being deleted.
+	- user acls fixed to correctly list folders and access.
+	- folder list driven by database, added FolderName function.
+	- update to admin templates to make them consistent across sites.
+
+0.05    29/09/2010
+	- repositioned site boxes to avoid text and logo clashing.
+
+0.04	16/09/2010
+	- added links to Metabase and Labyrinth.
+	- upgraded to Labyrinth v5.00.
+
+0.03	14/01/2010
+	- added quote.html
+	- added Analysis to site family lists.
+
+0.02	04/07/2009
+	- added TinyMCE support to comments for public users.
+	- fixed bug in saving comments for admin users.
+
+0.01	17/05/2009
+	- First released version, based on Labyrinth v4.16

@@ -1,0 +1,85 @@
+[% IF loggedin %]
+
+<h1>Menu</h1>
+<ul>
+[% FOREACH item = menus.2.data -%]
+    [% IF item.4 <= user.access -%]
+            <li><a href="[% item.3 %]" title="[% item.2 %] pages">[% item.2 %]</a></li>
+    [% END -%]
+[% END -%]
+</ul>
+<ul>
+<li><a href='http://stats.cpantesters.org/cpanmail.html'>Find A Tester</a></li>
+</ul>
+
+<h1>Profile</h1>
+<ul><li><a href="[% cgipath %]/pages.cgi?act=user-edit">Edit Profile</a></li></ul>
+
+[% ELSE %]
+
+<h1>Search</h1>
+<form name="search" id="search" method="post" action="[% cgipath %]/pages.cgi">
+<input type="hidden" name="act" value="diary-search" />
+<input type="text" name="data" size="12" value="Search For..." onFocus="if (this.value=='Search For...') this.value='';"/>
+<input class="button" type="submit" name="Submit" value="GO" />
+</form>
+
+<h1>Menu</h1>
+<ul>
+[% FOREACH item = menus.1.data -%]
+    [% IF item.4 <= user.access -%]
+            <li><a href="[% item.3 %]" title="[% item.2 %] pages">[% item.2 %]</a></li>
+    [% END -%]
+[% END -%]
+</ul>
+<ul>
+<li><a href='http://stats.cpantesters.org/cpanmail.html'>Find A Tester</a></li>
+</ul>
+
+[% IF latest.comments.0 %]
+<h1>Recent Comments</h1>
+<p>
+[% FOREACH item = latest.comments %]
+<em><b>[% item.author %]</b></em> in <a href="[% cgipath %]/pages.cgi?act=diary-item&amp;articleid=[% item.articleid %]">[% item.title %]</a><br />
+[% END %]
+</p>
+[% END %]
+
+[% IF events.shortlist %]
+<h1>Events</h1>
+<ul>
+[% FOREACH item = events.shortlist %]<li><a href="/event/[% item.eventid %]">[% item.title %]</a> ([% item.eventdate %])</li>[% END %]
+</ul>
+[% END %]
+
+[% IF archive.diary %]
+<h1>Archives</h1>
+<p>
+[% FOREACH item = archive.diary %]
+<a href="[% cgipath %]/pages.cgi?act=diary-list&amp;volume=[% item.volumeid %]">[% item.archdate %]</a> ([% item.counter %])<br />
+[% END %]
+</p>
+[% END %]
+
+[% IF cloud %]
+<h1>Tag Cloud</h1>
+[% cloud %]
+[% END %]
+
+<h1>Syndication</h1>
+<p>
+<img src="/images/icons/feed-icon-small.png" alt="CPAN Testers Wiki RSS 2.0 Feed">  <a href="/rss/rss-2.0.xml"  title="RSS 2.0" >RSS 2.0</a><br />
+<img src="/images/icons/feed-icon-small.png" alt="CPAN Testers Wiki Atom 1.0 Feed"> <a href="/rss/atom-1.0.xml" title="Atom 1.0">Atom 1.0</a></p>
+
+<p>
+<a href="http://technorati.com/faves?sub=addfavbtn&amp;add=http://blog.cpantesters.org"><img src="http://static.technorati.com/pix/fave/tech-fav-1.png" alt="Add to Technorati Favorites" /></a>
+</p>
+
+<div class="adverts">
+<h1>Perl Promotions</h1>
+<script type="text/javascript" src="http://adserver.szabgab.com/ads/direct_link_selflink.js?cnt=5&noself=1"></script>
+<p align="center">Ads provide by<br /> <a href="http://adserver.szabgab.com">The Perl Community AdServer</a>
+</div>
+
+[% END %]
+

@@ -1,0 +1,85 @@
+[% 
+    htmltitle = 'News &amp; Views' ;
+    title = 'News & Views' ;
+
+    crumb1_name = 'News &amp; Views' ;
+%]
+
+[% IF mainarts %]
+[% FOREACH article = mainarts %]
+
+    <h2><a href="[% webpath %]/diary/[% article.data.articleid %]" rel="bookmark" title="Permanent Link to [% article.data.title %]">[% article.data.title %]</a></h2>
+    <p class="small">Posted by <a href="/user/[% article.data.userid %]">[% article.data.name %]</a> on [% article.data.postdate %]</p>
+
+    [% FOREACH item = article.body %]
+    [% IF item.type == 1 %]
+    [% IF item.align  %][% class  = item.align  %][% ELSE %][% class  = "inline" %][% END %]
+    [% IF item.href %]
+        <div class="thumb[% item.align %]" >
+        <a href='[% item.href %]'><img src="[% webpath %]/[% item.link %]" alt="[% item.tag %]"
+        [% IF item.width  %]width="[% item.width %]"[% END %]
+        [% IF item.height %]height="[% item.height %]"[% END %]
+        /></a>
+        [% IF item.tag %]<p>[% item.tag %][% END -%]
+        </div>
+    [% ELSE %]
+        <div class="thumb[% item.align %]" >
+        <img src="[% webpath %]/[% item.link %]" alt="[% item.tag %]"
+        [% IF item.width  %]width="[% item.width %]"[% END %]
+        [% IF item.height %]height="[% item.height %]"[% END %]
+        />
+        [% IF item.tag %]<p>[% item.tag %][% END -%]
+        </div>
+    [% END %]
+    [% END %]
+    [% IF item.type == 2 %]
+            [% item.body %]
+    [% END %]
+    [% IF item.type == 3 %]
+            <a href='[% item.href %]'>[% item.body %]</a>
+    [% END %]
+    [% END %]
+
+    <table border="0" cellspacing="2" cellpadding="0" width="100%">
+    <tr><td valign="bottom">
+    [% IF article.meta %]
+      File Under:
+      [% count = 0 %]
+      [% FOREACH meta = article.meta %]
+        [% IF count > 0 %]/[% END %]
+        <a href="[% cgipath %]/pages.cgi?act=diary-meta&amp;data=[% meta %]">[% meta %]</a>
+        [% count = count + 1 %]
+      [% END %]
+      <br />
+    [% END %]
+      <a href="[% cgipath %]/pages.cgi?act=diary-item&amp;articleid=[% article.data.articleid %]#comments">
+      [% IF article.comments == 0 %]NO COMMENTS[% END %]
+      [% IF article.comments == 1 %]1 COMMENT[% END %]
+      [% IF article.comments > 1 %][% article.comments %] COMMENTS[% END %]
+      </a>
+    [% IF user.admin %]
+    | Edit | Delete
+    [% END %]
+    <hr class="ruler" />
+
+<!--
+    </td><td align="right">
+<script type="text/javascript">
+digg_url = 'http://barbie.missbarbell.co.uk/cgi-bin/pages.cgi?act=diary-item&amp;articleid=[% article.data.articleid %]';
+xdigg_skin = 'compact';
+</script>
+<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
+-->
+    </td></tr>
+    </table>
+[% END %]
+[% ELSE %]
+<p>Sorry, your search failed to find any blog entries :(</p>
+[% END %]
+
+[% IF archive.volumes %]
+<table class="prevnext">
+<tr><td class="left">[% IF archive.volumes.prev %]<< <a href="[% cgipath %]/pages.cgi?act=diary-list&amp;volume=[% archive.volumes.prev.volumeid %]">[% archive.volumes.prev.archdate %]</a> ([% archive.volumes.prev.counter %])[% END %]</td>
+    <td class="right">[% IF archive.volumes.next %]<a href="[% cgipath %]/pages.cgi?act=diary-list&amp;volume=[% archive.volumes.next.volumeid %]">[% archive.volumes.next.archdate %]</a> ([% archive.volumes.next.counter %]) >>[% END %]</td></tr>
+</table>
+[% END %]

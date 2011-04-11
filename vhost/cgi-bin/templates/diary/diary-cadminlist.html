@@ -1,0 +1,30 @@
+[% 
+    title = 'Comment List' ;
+
+    crumb3_name = 'Diary' ;
+    crumb3_href = '/cgi-bin/pages.cgi?act=diary-admin' ;
+    crumb2_name = 'Comment' ;
+    crumb2_href = '/cgi-bin/pages.cgi?act=diary-clist' ;
+    crumb1_name = 'List' ;
+%]
+
+<p>The comments below require approval</p>
+
+[% IF comments.0 %]
+[% FOREACH item = comments %]
+    <h4>[% item.title %][% IF item.subject %]: [% item.subject %]</h4>[% END %]
+    [% item.body %]
+    <p class="small">Posted by [% item.author %] on [% item.postdate %] ([% item.ipaddr %])
+    <br />
+
+      <a href="[% cgipath %]/pages.cgi?act=diary-cmark&amp;mark=block&amp;commentid=[% item.commentid %]">Block</a>
+    | <a href="[% cgipath %]/pages.cgi?act=diary-cmark&amp;mark=allow&amp;commentid=[% item.commentid %]">Allow</a>
+    | <a href="[% cgipath %]/pages.cgi?act=diary-cedit&amp;commentid=[% item.commentid %]">Edit</a>
+    | <a href="[% cgipath %]/pages.cgi?act=diary-cpromote&amp;commentid=[% item.commentid %]">Approve</a>
+    | <a href="[% cgipath %]/pages.cgi?act=diary-cdelete&amp;commentid=[% item.commentid %]">Delete</a></p>
+    <hr />
+[% END %]
+[% ELSE %]
+<p>No Comments</p>
+<hr />
+[% END %]

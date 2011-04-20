@@ -15,8 +15,8 @@ use Labyrinth;
 
 #----------------------------------------------------------
 
-my $wiki = Labyrinth->new();
-$wiki->run('/var/www/cpanblog/cgi-bin/config/settings.ini');
+my $blog = Labyrinth->new();
+$blog->run('/var/www/cpanblog/cgi-bin/config/settings.ini');
 
 1;
 

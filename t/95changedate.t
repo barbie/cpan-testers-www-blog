@@ -1,6 +1,6 @@
 use Test::More;
 use IO::File;
-use CPAN::Testers::WWW::Wiki;
+use CPAN::Testers::WWW::Blog;
 
 # Skip if doing a regular install
 plan skip_all => "Author tests not required for installation"
@@ -19,7 +19,7 @@ plan no_plan;
 my $latest = 0;
 while(<$fh>) {
     next        unless(m!^\d!);
-    $latest = 1 if(m!^$CPAN::Testers::WWW::Wiki::VERSION!);
+    $latest = 1 if(m!^$CPAN::Testers::WWW::Blog::VERSION!);
     like($_, qr!\d[\d._]+\s+\d{2}/\d{2}/\d{4}!,'... version has a date');
 }
 

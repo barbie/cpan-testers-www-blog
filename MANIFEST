@@ -377,4 +377,5 @@ vhost/html/js/tiny_mce/utils/mctabs.js
 vhost/html/js/tiny_mce/utils/validate.js
 vhost/toolkit/rssfeeds.pl
 vhost/toolkit/rssfeeds.sh
+vhost/toolkit/sumhits.pl
 vhost/vhosts.conf

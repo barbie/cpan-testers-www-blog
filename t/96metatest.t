@@ -11,8 +11,8 @@ plan no_plan;
 
 my $meta = meta_spec_ok(undef,undef,@_);
 
-use CPAN::Testers::WWW::Wiki;
-my $version = $CPAN::Testers::WWW::Wiki::VERSION;
+use CPAN::Testers::WWW::Blog;
+my $version = $CPAN::Testers::WWW::Blog::VERSION;
 
 is($meta->{version},$version,
     'META.json distribution version matches');

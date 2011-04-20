@@ -4,5 +4,5 @@ use strict;
 use Test::More tests => 1;
 
 BEGIN {
-    use_ok('CPAN::Testers::WWW::Wiki');
+    use_ok('CPAN::Testers::WWW::Blog');
 }

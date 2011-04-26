@@ -57,3 +57,10 @@ function ImageGallery(callback) {
 	window.open(cgipath+"pages.cgi?act=imgs-gallery&amp;imagetype=0,1,2,4,9", "popup", "width=340,height=390,scrollbars=no,menubar=no,resizable=no,status=no,toolbar=no,location=no");
 }
 
+function AddTag(tag) {
+      var meta = document.getElementById('metadata');
+      var val = meta.value;
+      if(val) { val = val + ' ' }
+      val = val + tag
+    meta.value = val;
+}

@@ -8,7 +8,7 @@
 [% IF mainarts %]
 [% FOREACH article = mainarts %]
 
-    <h2><a href="[% webpath %]/diary/[% article.data.articleid %]" rel="bookmark" title="Permanent Link to [% article.data.title %]">[% article.data.title %]</a></h2>
+    <h2><a href="/diary/[% article.data.articleid %]" rel="bookmark" title="Permanent Link to [% article.data.title %]">[% article.data.title %]</a></h2>
     <p class="small">Posted by <a href="/user/[% article.data.userid %]">[% article.data.name %]</a> on [% article.data.postdate %]</p>
 
     [% FOREACH item = article.body %]
@@ -20,7 +20,7 @@
         [% IF item.width  %]width="[% item.width %]"[% END %]
         [% IF item.height %]height="[% item.height %]"[% END %]
         /></a>
-        [% IF item.tag %]<p>[% item.tag %][% END -%]
+        [% IF item.tag %]<p>[% item.tag %]</p>[% END -%]
         </div>
     [% ELSE %]
         <div class="thumb[% item.align %]" >
@@ -28,15 +28,19 @@
         [% IF item.width  %]width="[% item.width %]"[% END %]
         [% IF item.height %]height="[% item.height %]"[% END %]
         />
-        [% IF item.tag %]<p>[% item.tag %][% END -%]
+        [% IF item.tag %]<p>[% item.tag %]</p>[% END -%]
         </div>
     [% END %]
     [% END %]
     [% IF item.type == 2 %]
+        <div class="justified">
             [% item.body %]
+        </div>
     [% END %]
     [% IF item.type == 3 %]
+        <div class="justified">
             <a href='[% item.href %]'>[% item.body %]</a>
+        </div>
     [% END %]
     [% END %]
 
@@ -47,12 +51,12 @@
       [% count = 0 %]
       [% FOREACH meta = article.meta %]
         [% IF count > 0 %]/[% END %]
-        <a href="[% cgipath %]/pages.cgi?act=diary-meta&amp;data=[% meta %]">[% meta %]</a>
+        <a href="/meta/[% meta %]">[% meta %]</a>
         [% count = count + 1 %]
       [% END %]
       <br />
     [% END %]
-      <a href="[% cgipath %]/pages.cgi?act=diary-item&amp;articleid=[% article.data.articleid %]#comments">
+      <a href="/diary/[% article.data.articleid %]#comments">
       [% IF article.comments == 0 %]NO COMMENTS[% END %]
       [% IF article.comments == 1 %]1 COMMENT[% END %]
       [% IF article.comments > 1 %][% article.comments %] COMMENTS[% END %]
@@ -65,7 +69,7 @@
 <!--
     </td><td align="right">
 <script type="text/javascript">
-digg_url = 'http://barbie.missbarbell.co.uk/cgi-bin/pages.cgi?act=diary-item&amp;articleid=[% article.data.articleid %]';
+digg_url = 'http://barbie.missbarbell.co.uk/diary/[% article.data.articleid %]';
 xdigg_skin = 'compact';
 </script>
 <script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
@@ -79,7 +83,7 @@ xdigg_skin = 'compact';
 
 [% IF archive.volumes %]
 <table class="prevnext">
-<tr><td class="left">[% IF archive.volumes.prev %]<< <a href="[% cgipath %]/pages.cgi?act=diary-list&amp;volume=[% archive.volumes.prev.volumeid %]">[% archive.volumes.prev.archdate %]</a> ([% archive.volumes.prev.counter %])[% END %]</td>
-    <td class="right">[% IF archive.volumes.next %]<a href="[% cgipath %]/pages.cgi?act=diary-list&amp;volume=[% archive.volumes.next.volumeid %]">[% archive.volumes.next.archdate %]</a> ([% archive.volumes.next.counter %]) >>[% END %]</td></tr>
+<tr><td class="left">[% IF archive.volumes.prev %]&lt;&lt; <a href="/volume/[% archive.volumes.prev.volumeid %]">[% archive.volumes.prev.archdate %]</a> ([% archive.volumes.prev.counter %])[% END %]</td>
+    <td class="right">[% IF archive.volumes.next %]<a href="/volume/[% archive.volumes.next.volumeid %]">[% archive.volumes.next.archdate %]</a> ([% archive.volumes.next.counter %]) &gt;&gt;[% END %]</td></tr>
 </table>
 [% END %]

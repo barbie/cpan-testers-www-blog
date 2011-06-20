@@ -20,17 +20,16 @@
 [% END %]
 
 <form method="post" action="[% cgipath %]/pages.cgi" name="EDIT" enctype="multipart/form-data">
-<input type="hidden" name="act" value="diary-save" />
-<input type="hidden" name="recordid" value='' />
-<input type="hidden" name="section" value="[% section %]" />
+<input type="hidden" name="act"       value="diary-save" />
+<input type="hidden" name="recordid"  value='' />
+<input type="hidden" name="section"   value="[% section %]" />
 <input type="hidden" name="articleid" value="[% article.data.articleid %]" />
-<input type="hidden" name="folderid" value="[% article.data.folderid %]" />
-<input type="hidden" name="userid" value="[% article.data.userid %]" />
-<input type="hidden" name="imageid" value="[% article.data.imageid %]" />
-<input type="hidden" name='doaction' value='' />
-
-<input type="hidden" name="display" value="display0" />
-<input type="hidden" name="list" value="[% article.blocks %]" />
+<input type="hidden" name="folderid"  value="[% article.data.folderid %]" />
+<input type="hidden" name="userid"    value="[% article.data.userid %]" />
+<input type="hidden" name="imageid"   value="[% article.data.imageid %]" />
+<input type="hidden" name='doaction'  value='' />
+<input type="hidden" name="display"   value="display0" />
+<input type="hidden" name="list"      value="[% article.blocks %]" />
 
 <table class="blocker">
 <tr><th width="85">Title *</th>
@@ -75,7 +74,7 @@
     [% END %]
         <input type="file" name="IMAGEUPLOAD[% item.orderno %]" />
         <br />[ <a href="javascript:PhotoGallery('display[% item.orderno %]')">Select from Gallery</a> ]
-        <table width="300">
+        <table>
         <tr><td>Align:</td><td>[% item.ddalign %]</td></tr>
         <tr><td>HyperLink:</td><td><input type="text" name="IMAGELINK[% item.orderno %]" value="[% item.href %]"   size="40" /></td></tr>
         <tr><td>Tag:</td><td><input       type="text" name="IMAGETAG[% item.orderno %]"  value="[% item.tag %]"    size="40" /></td></tr>
@@ -130,7 +129,11 @@
 <p class="small">Posted on [% preview.data.postdate %]</p>
 
 [% FOREACH item = preview.body %]
-[% IF item.type == 2 ; THEN ; item.body ; END %]
+[% IF item.type == 2 %]
+        <div class="justified">
+        [% item.body %]
+        </div>
+[% END %]
 [% IF item.type == 1 %]
 
     [% IF item.link %]
@@ -141,7 +144,7 @@
         [% IF item.width  %]width="[% item.width %]"[% END %]
         [% IF item.height %]height="[% item.height %]"[% END %]
         /></a>
-        [% IF item.tag %]<p>[% item.tag %][% END %]
+        [% IF item.tag %]<p>[% item.tag %]</p>[% END %]
         </div>
     [% ELSE %]
         <div class="thumb[% item.align %]" >
@@ -149,13 +152,15 @@
         [% IF item.width  %]width="[% item.width %]"[% END %]
         [% IF item.height %]height="[% item.height %]"[% END %]
         />
-        [% IF item.tag %]<p>[% item.tag %][% END %]
+        [% IF item.tag %]<p>[% item.tag %]</p>[% END %]
         </div>
     [% END %]
     [% END %]
 [% END %]
 [% IF item.type == 3 %]
+        <div class="justified">
         <a href='[% item.href %]'>[% item.body %]</a>
+        </div>
 [% END %]
 [% END %]
 
@@ -165,12 +170,12 @@
       [% count = 0 %]
       [% FOREACH meta = preview.meta %]
         [% IF count > 0 %]/[% END %]
-        <a href="[% cgipath %]/pages.cgi?act=diary-meta&amp;data=[% meta %]">[% meta %]</a>
+        <a href="/meta/[% meta %]">[% meta %]</a>
         [% count = count + 1 %]
       [% END %]
       <br />
     [% END %]
-      <a href="[% cgipath %]/pages.cgi?act=diary-item&amp;articleid=[% article.data.articleid %]#comments">[% IF article.data.comments > 0 ; THEN ; article.data.comments ; ELSE ; '0' ; END %] COMMENTS</a>
+      <a href="/diary/[% article.data.articleid %]#comments">[% IF article.data.comments > 0 ; THEN ; article.data.comments ; ELSE ; '0' ; END %] COMMENTS</a>
     [% IF user.access > 3 %]
     | Edit | Delete
     [% END %]
@@ -181,7 +186,7 @@
     [% FOREACH item = comments %]
         [% IF item.subject %]<h4>[% item.subject %]</h4>[% END %]
         [% item.body %]
-        <p class="small">Posted by <em><b>[% item.author %]</b></em> on [% item.postdate %]
+        <p class="small">Posted by <em><strong>[% item.author %]</strong></em> on [% item.postdate %]
         | <a href="[% cgipath %]/pages.cgi?act=diary-cedit&amp;commentid=[% item.commentid %]">Edit</a>
         | <a href="[% cgipath %]/pages.cgi?act=diary-cdelete2&amp;commentid=[% item.commentid %]&amp;articleid=[% article.data.articleid %]">Delete</a></p>
         <hr />

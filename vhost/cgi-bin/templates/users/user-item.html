@@ -6,16 +6,25 @@
     crumb1_name = data.realname ;
 %]
 
-<table width="100%">
-<tr><td>[% IF data.link %]
-        <div class="left" >
-          <img src='[% webpath %]/[% data.link %]' alt='[% data.tag %]' />
-        </div>
-        [% END %]
-        <p>[% data.realname ; IF data.nickname %] ([% data.nickname %])[% END %] has posted
-          [% IF    data.posts == 1 %]once[% ELSIF data.posts == 2 %]twice[% ELSE ; data.posts %] times[% END %].</p>
-        [% IF data.aboutme %][% data.aboutme %][% END %]
-        [% IF data.url %]<p>My Web Page: <a href="[% data.url %]">[% data.url %]</a></p>[% END %]
-    </td>
-</tr>
-</table>
+<div class="users">
+  <div class="userpic">
+    [% IF data.link %]
+      <img src="[% webpath %]/[% data.link %]" alt="[% data.tag %]" align="right" 
+      [% IF data.width  %]width="[% data.width %]"[% END %]
+      [% IF data.height %]height="[% data.height %]"[% END %]
+      />
+    [% END %]
+  </div>
+  <div class="userbits">
+    [% IF user.access == 5 %]
+    <div class="username"><a href="[% cgipath %]/pages.cgi?act=user-adminedit&amp;userid=[% data.userid %]">[% data.realname %]</a></div>
+    [% ELSE %]
+    <div class="username">[% data.realname %]</div>
+    [% END %]
+  </div>
+  <div class="userinfo">
+    [% IF data.aboutme ; data.aboutme ; END %]
+    [% IF data.url %]<p><strong>My Web Page:</strong> <a href="[% data.url %]">[% data.url %]</a></p>[% END %]
+    [% IF ! data.aboutme AND ! data.url %]<p>... to be completed.</p>[% END %]
+  </div>
+</div>

@@ -84,7 +84,7 @@
   <div class="userinfo">
     [% IF users.preview.link %]<img src="[% webpath %]/[% users.preview.link %]" alt="[% users.preview.tag %]" align="right" />[% END %]
     [% IF users.preview.aboutme ; users.preview.aboutme ; END %]
-    [% IF users.preview.url %]<p><b>My Web Page:</b> <a href="[% preview.url %]">[% users.preview.url %]</a></p>[% END %]
+    [% IF users.preview.url %]<p><strong>My Web Page:</strong> <a href="[% preview.url %]">[% users.preview.url %]</a></p>[% END %]
     [% IF ! users.preview.aboutme AND ! users.preview.url %]<p>... to be completed.</p>[% END %]
   </div>
 </div>

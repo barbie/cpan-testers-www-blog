@@ -12,9 +12,9 @@
 [% IF users.data %]
 [% IF thanks %]<p>[% thanks %]</p>[% END %]
 <p>Fields marked * are mandatory fields and must be completed.</p>
-<p><b>Please take the time to enter your details, as it helps others to identify you when you make any
+<p><strong>Please take the time to enter your details, as it helps others to identify you when you make any
 changes to the pages on the site. Note that only the details shown in the preview at the bottom of
-the page, will be visible on the wiki.</b></p>
+the page, will be visible on the wiki.</strong></p>
 
 <form method="post" action="[% cgipath %]/pages.cgi">
 <input type="hidden" name="act" value="user-pass" />
@@ -69,7 +69,7 @@ the page, will be visible on the wiki.</b></p>
   <div class="userinfo">
     [% IF users.preview.link %]<img src="[% webpath %]/[% users.preview.link %]" alt="[% users.preview.tag %]" align="right" />[% END %]
     [% IF users.preview.aboutme ; users.preview.aboutme ; END %]
-    [% IF users.preview.url %]<p><b>My Web Page:</b> <a href="[% preview.url %]">[% users.preview.url %]</a></p>[% END %]
+    [% IF users.preview.url %]<p><strong>My Web Page:</strong> <a href="[% preview.url %]">[% users.preview.url %]</a></p>[% END %]
     [% IF ! users.preview.aboutme AND ! users.preview.url %]<p>... to be completed.</p>[% END %]
   </div>
 </div>

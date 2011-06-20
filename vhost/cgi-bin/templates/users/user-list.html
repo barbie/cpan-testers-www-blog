@@ -63,7 +63,7 @@
   <div class="userinfo">
     [% IF item.link %]<img src="[% webpath %]/[% item.link %]" alt="[% item.tag %]" align="right" />[% END %]
     [% IF item.aboutme ; item.aboutme ; END %]
-    [% IF item.url %]<p><b>My Web Page:</b> <a href="[% item.url %]">[% item.url %]</a></p>[% END %]
+    [% IF item.url %]<p><strong>My Web Page:</strong> <a href="[% item.url %]">[% item.url %]</a></p>[% END %]
     [% IF ! item.aboutme AND ! item.url %]<p>... to be completed.</p>[% END %]
   </div>
 </div>

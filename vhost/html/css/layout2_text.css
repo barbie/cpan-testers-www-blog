@@ -119,12 +119,13 @@ p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,
 .main a:hover {color:rgb(42,90,138); text-decoration:underline;}
 .main a:visited {color:rgb(42,90,138);}
 
-.main a img {border:solid 1px rgb(150,150,150);}
+.main a img       {border:solid 1px rgb(150,150,150);}
 .main a:hover img {border:solid 1px rgb(220,220,220);}
 
+.footnote   { text-align: center; }
+.footnote a { color:rgb(70,122,167); font-weight:bold; text-decoration:none; font-size: 0.7em; }
 
-
-.ud { border: 1px dashed #f00; padding: 5px; margin-bottom: 1em}
+.ud   { border: 1px dashed #f00; padding: 5px; margin-bottom: 1em}
 .ud p { color: #f00; }
 
 .orange_buttons {
@@ -154,8 +155,11 @@ p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,
 .main-content table td.NA       { background-color: #999900; color: #fff; }
 .main-content table td.blank    { background-color: #ffffff; color: #fff; }
 
-table.blocker th { padding: 2px 7px; }
-table.blocker li { font-size: 9pt; }
+.main-content table table       { width: 100%; }
+.main-content table p           { font-size: 9pt; }
+
+table.blocker th        { padding: 2px 7px; }
+table.blocker li        { font-size: 9pt; }
 table.blocker th.named  { width: 100px; }
 
 .gPASS    { margin:0;padding:0; }
@@ -292,3 +296,8 @@ span.tagcloud20 a {text-decoration: none;}
 .mceToolbar table    { border: 0px; border-collapse: collapse; }
 .mceToolbar table th { border: 0px; padding: 0px; height: 1em; }
 .mceToolbar table td { border: 0px; padding: 0px; height: 1em; }
+
+.thumbright { float: right; margin: 0 0 10px 10px; }
+.thumbleft  { float: left;  margin: 0 10px 10px 0; }
+
+.justified  { text-align: justify; }

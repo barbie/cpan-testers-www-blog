@@ -448,8 +448,8 @@ CREATE TABLE `menus` (
 -- Dumping data for table `menus`
 --
 
-INSERT INTO `menus` VALUES (1,1,1,'Public Navigation','',0);
-INSERT INTO `menus` VALUES (2,1,2,'Admin Navigation','',0);
+INSERT INTO `menus` VALUES (1,1,1,'Public','Public Menu',0);
+INSERT INTO `menus` VALUES (2,1,2,'Admin','Admin Menu',0);
 
 --
 -- Table structure for table `mxarticles`

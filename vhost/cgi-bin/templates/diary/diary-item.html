@@ -53,7 +53,7 @@
     [% FOREACH item = comments %]
         [% IF item.subject %]<h4>[% item.subject %]</h4>[% END %]
         [% item.body %]
-        <p class="small">Posted by <em><b>[% IF item.href %]<a href="[% item.href %]">[% END ; item.author ; IF item.href %]</a>[% END %]</b></em> on [% item.postdate %]</p>
+        <p class="small">Posted by <em><strong>[% IF item.href %]<a href="[% item.href %]">[% END ; item.author ; IF item.href %]</a>[% END %]</strong></em> on [% item.postdate %]</p>
         <hr />
     [% END %]
 [% ELSE %]

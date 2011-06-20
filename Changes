@@ -1,5 +1,14 @@
 Changes for the CPAN Testers Blog website
 
+1.01	20/06/2011
+	- updates to improve presentation.
+	- included a Terms & Conidtions page to meet EU Cookie Directive.
+	- updates to diary and user templates for images.
+	- updates to templates for usability compliance.
+	- fixes for Posted lookups.
+        - upgrade to Labyrinth 5.08.
+        - upgrade to Labyrinth-Plugin-Core 5.08.
+
 1.00    20/04/2011
         - upgrade to Labyrinth 5.04.
         - upgrade to Labyrinth-Plugin-Core 5.06.

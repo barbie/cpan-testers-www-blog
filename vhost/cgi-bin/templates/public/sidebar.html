@@ -4,7 +4,7 @@
 <ul>
 [% FOREACH item = menus.2.data -%]
     [% IF item.4 <= user.access -%]
-            <li><a href="[% item.3 %]" title="[% item.2 %] pages">[% item.2 %]</a></li>
+        <li><a href="[% item.3 %]" title="[% item.2 %] pages">[% item.2 %]</a></li>
     [% END -%]
 [% END -%]
 </ul>
@@ -28,7 +28,7 @@
 <ul>
 [% FOREACH item = menus.1.data -%]
     [% IF item.4 <= user.access -%]
-            <li><a href="[% item.3 %]" title="[% item.2 %] pages">[% item.2 %]</a></li>
+        <li><a href="[% item.3 %]" title="[% item.2 %] pages">[% item.2 %]</a></li>
     [% END -%]
 [% END -%]
 </ul>
@@ -40,7 +40,7 @@
 <h1>Recent Comments</h1>
 <p>
 [% FOREACH item = latest.comments %]
-<em><b>[% item.author %]</b></em> in <a href="[% cgipath %]/pages.cgi?act=diary-item&amp;articleid=[% item.articleid %]">[% item.title %]</a><br />
+<em><strong>[% item.author %]</strong></em> in <a href="/diary/[% item.articleid %]">[% item.title %]</a><br />
 [% END %]
 </p>
 [% END %]
@@ -56,7 +56,7 @@
 <h1>Archives</h1>
 <p>
 [% FOREACH item = archive.diary %]
-<a href="[% cgipath %]/pages.cgi?act=diary-list&amp;volume=[% item.volumeid %]">[% item.archdate %]</a> ([% item.counter %])<br />
+<a href="/volume/[% item.volumeid %]">[% item.archdate %]</a> ([% item.counter %])<br />
 [% END %]
 </p>
 [% END %]
@@ -68,11 +68,11 @@
 
 <h1>Syndication</h1>
 <p>
-<img src="/images/icons/feed-icon-small.png" alt="CPAN Testers Wiki RSS 2.0 Feed">  <a href="/rss/rss-2.0.xml"  title="RSS 2.0" >RSS 2.0</a><br />
-<img src="/images/icons/feed-icon-small.png" alt="CPAN Testers Wiki Atom 1.0 Feed"> <a href="/rss/atom-1.0.xml" title="Atom 1.0">Atom 1.0</a></p>
+<img src="/images/icons/feed-icon-small.png" alt="CPAN Testers Wiki RSS 2.0 Feed"  width="14" height="14" /> <a href="/rss/rss-2.0.xml"  title="RSS 2.0" >RSS 2.0</a><br />
+<img src="/images/icons/feed-icon-small.png" alt="CPAN Testers Wiki Atom 1.0 Feed" width="14" height="14" /> <a href="/rss/atom-1.0.xml" title="Atom 1.0">Atom 1.0</a></p>
 
 <p>
-<a href="http://technorati.com/faves?sub=addfavbtn&amp;add=http://blog.cpantesters.org"><img src="http://static.technorati.com/pix/fave/tech-fav-1.png" alt="Add to Technorati Favorites" /></a>
+<a href="http://technorati.com/faves?sub=addfavbtn&amp;add=http://blog.cpantesters.org"><img src="http://static.technorati.com/pix/fave/tech-fav-1.png" alt="Add to Technorati Favorites" width="145" height="25" /></a>
 </p>
 
 <div class="adverts">
@@ -82,4 +82,3 @@
 </div>
 
 [% END %]
-

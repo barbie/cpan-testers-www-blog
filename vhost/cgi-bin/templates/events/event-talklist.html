@@ -12,17 +12,17 @@
 <input type="hidden" name='act' value='event-listtalk' />
 
 <div class="boxer">
-    <table class="blocker">
-    <tr><th>Event</th><th>Speaker</th><th>Talk</th><th>Select</th></tr>
+<table class="blocker" summary="Talks List">
+<tr><th>Event</th><th>Speaker</th><th>Talk</th><th>Select</th></tr>
 
 [% FOREACH item = data %]
-    <tr><td>[% item.title %]</td>
-        <td>[% item.realname %]</td>
-        <td><a href="[% cgipath %]/pages.cgi?act=event-edittalk&amp;talkid=[% item.talkid %]">[% item.talktitle %]</a></td>
-        <td><input type="checkbox" name="LISTED" value="[% item.talkid %]" /></td></tr>
+<tr><td>[% item.title %]</td>
+    <td>[% item.realname %]</td>
+    <td><a href="[% cgipath %]/pages.cgi?act=event-edittalk&amp;talkid=[% item.talkid %]">[% item.talktitle %]</a></td>
+    <td><input type="checkbox" name="LISTED" value="[% item.talkid %]" /></td></tr>
 [% END %]
 
-    </table>
+</table>
 </div>
 
 [% IF norecs %]<p align="center">No venues currently listed[% END %]

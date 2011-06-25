@@ -6,26 +6,26 @@
     crumb1_name = 'List' ;
 %]
 
-<p> <a href="[% cgipath %]/pages.cgi?act=diary-add">add a diary entry</a>
+<p> <a href="[% cgipath %]/pages.cgi?act=diary-add" title="add a diary entry">add a diary entry</a>
 [% IF comcount %]
-|   <a href="[% cgipath %]/pages.cgi?act=diary-clist">comment approval ([% comcount %])</a>[% END %]
+|   <a href="[% cgipath %]/pages.cgi?act=diary-clist" title="comment approval">comment approval ([% comcount %])</a>[% END %]
 </p>
 
 <form name="datalist" method="post" action="[% cgipath %]/pages.cgi">
 <input type="hidden" name='act' value='diary-admin' />
 
-<table class="blocker">
-    <tr><th>Title</th>
-        <th>Date</th>
-        <th>Status</th>
-        <th>Select</th>
-    </tr>
+<table class="blocker" summary="Diary Entires">
+<tr><th>Title</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Select</th>
+</tr>
 [% FOREACH item = data %]
-    <tr><td><a href="[% cgipath %]/pages.cgi?act=diary-edit&amp;articleid=[% item.articleid %]">[% item.title %]</a></td>
-        <td>[% item.postdate %]</td>
-        <td>[% item.publishstate %]</td>
-        <td><input type="checkbox" name="LISTED" value="[% item.articleid %]" /></td>
-    </tr>
+<tr><td><a href="[% cgipath %]/pages.cgi?act=diary-edit&amp;articleid=[% item.articleid %]" title="Edit '[% item.title %]'">[% item.title %]</a></td>
+    <td>[% item.postdate %]</td>
+    <td>[% item.publishstate %]</td>
+    <td><input type="checkbox" id="LISTED[% item.articleid %]" name="LISTED" value="[% item.articleid %]" /><label for="LISTED[% item.articleid %]" class="accessibility">Select</label></td>
+</tr>
 [% END %]
 [% IF norecs %]
 <tr><td colspan="3" align="center">No diary listed.</td></tr>

@@ -31,7 +31,7 @@
 <input type="hidden" name="display"   value="display0" />
 <input type="hidden" name="list"      value="[% article.blocks %]" />
 
-<table class="blocker">
+<table class="blocker" summary="Diary Edit Form">
 <tr><th width="85">Title *</th>
     <th width="10" class="alert">[% article.data.title_err %]</th>
     <td><input type="text" name="title" value="[% article.data.title %]" size="55" /></td>
@@ -74,9 +74,9 @@
     [% END %]
         <input type="file" name="IMAGEUPLOAD[% item.orderno %]" />
         <br />[ <a href="javascript:PhotoGallery('display[% item.orderno %]')">Select from Gallery</a> ]
-        <table>
+        <table summary="Image Edit Form">
         <tr><td>Align:</td><td>[% item.ddalign %]</td></tr>
-        <tr><td>HyperLink:</td><td><input type="text" name="IMAGELINK[% item.orderno %]" value="[% item.href %]"   size="40" /></td></tr>
+        <tr><td>HyperLink:</td><td><input type="text" name="IMAGEHREF[% item.orderno %]" value="[% item.href %]"   size="40" /></td></tr>
         <tr><td>Tag:</td><td><input       type="text" name="IMAGETAG[% item.orderno %]"  value="[% item.tag %]"    size="40" /></td></tr>
         <tr><td>Width:</td><td><input     type="text" name="width[% item.orderno %]"     value="[% item.width %]"  size="40" /></td></tr>
         <tr><td>Height:</td><td><input    type="text" name="height[% item.orderno %]"    value="[% item.height %]" size="40" /></td></tr>

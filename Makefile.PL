@@ -3,8 +3,8 @@ WriteMakefile(
     NAME                => 'CPAN::Testers::WWW::Blog',
     'VERSION_FROM'      => 'lib/CPAN/Testers/WWW/Blog.pm',
     PREREQ_PM           => {
-        'Labyrinth'                             => '5.08',
-        'Labyrinth::Plugin::Core'               => '5.08',
+        'Labyrinth'                             => '5.09',
+        'Labyrinth::Plugin::Core'               => '5.09',
         'Labyrinth::Plugin::Articles::Diary'    => '1.00',
         'Labyrinth::Plugin::Event'              => '1.01',
         'Labyrinth::DIUtils::ImageMagick'       => '5.04',

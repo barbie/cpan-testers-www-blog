@@ -23,7 +23,7 @@
 <input type="hidden" name="act" value="user-save" />
 <input type="hidden" name="userid" value="[% IF users.data.userid %][% users.data.userid %][% ELSE %]0[% END %]" />
 
-<table width="100%">
+<table width="100%" summary="User Edit Form">
 <tr><th width="150">Email *</th>
     <th class="alert">[% users.data.email_err %]</th>
     <td><input type="text" name="email" value="[% users.data.email %]" size="50" /></td>

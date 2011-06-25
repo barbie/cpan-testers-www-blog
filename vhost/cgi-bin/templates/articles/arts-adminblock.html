@@ -6,7 +6,7 @@
 <input type="hidden" name='doaction' value='' />
 <input type="hidden" name="recordid" value='' />
 
-<table width="100%">
+<table width="100%" summary="Article Edit Form">
 <tr><th width="100">Title *</th>
     <th width="10" class="alert">[% article.data.title_err %]</th>
     <td><input type="text" name="title" value="[% article.data.title %]" size="50" /></td>
@@ -35,7 +35,7 @@
 [% END %]
 [% END %]
 
-<table width="100%">
+<table width="100%" summary="Article Content Edit Form">
 
 [% IF article.blocks %]
 
@@ -53,9 +53,9 @@
         <img id="display[% item.orderno %]" src="[% webpath %]/images/blank.png" alt="" />
     [% END %]
         <br />[ <a href="javascript:DoPopup('display[% item.orderno %]')">Select from Gallery</A> ]
-        <table>
+        <table summary="Image Edit Form">
         <tr><td>Align:</td><td colspan="3">[% item.ddalign %]</td></tr>
-        <tr><td>HyperLink:</td><td><input type="text" name="IMAGELINK[% item.orderno %]" value="[% item.tag %]" /></td>
+        <tr><td>HyperLink:</td><td><input type="text" name="IMAGEHREF[% item.orderno %]" value="[% item.tag %]" /></td>
             <td>Tag:</td><td><input       type="text" name="IMAGETAG[% item.orderno %]"  value="[% item.tag %]" /></td></tr>
         <tr><td>Width:</td><td><input     type="text" name="width[% item.orderno %]"     value="[% item.width %]" /></td>
             <td>Height:</td><td><input    type="text" name="height[% item.orderno %]"    value="[% item.height %]" /></td></tr>

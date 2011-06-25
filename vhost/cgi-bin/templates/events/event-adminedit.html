@@ -25,7 +25,7 @@
 <input type="hidden" name='ALIGN0'   value='0' />
 
 <h2>Event Details</h3>
-<table class="blocker">
+<table class="blocker" summary="Event Edit Form">
 <tr><th class="named">Title *</th>
     <th width="10">[% data.title_err %]</th>
     <td><input type="text" name="title" value="[% data.title %]" size="55" /></td>
@@ -55,7 +55,7 @@
 <p align="right"><input type="submit" value='Submit' /></p>
 
 <h2>Associated Details</h3>
-<table class="blocker">
+<table class="blocker" summary="Venue Form">
 <tr><th class="named">Venue</th>
     <th width="10">[% data.venueid_err %]</th>
     <td>[% IF data.venue %][% data.venue %], [% data.address %][% ELSE %]No venue selected[% END %]<br />
@@ -73,7 +73,7 @@
 <p align="right"><input type="submit" value='Submit' /></p>
 
 <h2>Description</h3>
-<table class="blocker">
+<table class="blocker" summary="Description Form">
 <tr><th class="named">Body *</th>
     <th width="10">[% data.body_err %]</th>
     <td><textarea name="body" rows="15" cols="40">[% data.body %]</textarea></td></tr>
@@ -83,7 +83,7 @@
 </table>
 
 <h2>Talks</h3>
-<table class="blocker">
+<table class="blocker" summary="Talk List">
 <tr><th class="named">Talks</th>
     <th width="10"></th>
     <td><a href="[% cgipath %]/pages.cgi?act=event-addtalk&amp;eventid=[% data.eventid %]">Add A Talk</a> |

@@ -34,20 +34,20 @@ You can now download the latest ICalendar for my appearances.
 
 [% IF events.longlist %]
 [% FOREACH item = events.longlist %]
-        <hr class="clear-contentunit" />
+<hr class="clear-contentunit" />
 <h2>[% item.eventdate %] - [% item.title %]</h2>
     [% IF event.venue %]
-<p> [% IF item.venuelink %]<a href="[% item.venuelink %]">[% item.venue %],</a>
+<p> [% IF item.venuelink %]<a href="[% item.venuelink %]" title="[% item.venue %]">[% item.venue %],</a>
     [% ELSE %][% item.venue %],
     [% END %]
-    [% IF item.addresslink %]<br /><a href="[% item.addresslink %]">[% item.address %]</a>
+    [% IF item.addresslink %]<br /><a href="[% item.addresslink %]" title="Map Link">[% item.address %]</a>
     [% ELSE %][% item.address %]
     [% END %]
 </p>
     [% END %]
 
     [% item.snippet %]
-    <p>... <a href="/event/[% item.eventid %]">read more details</a>.</p>
+    <p>... <a href="/event/[% item.eventid %]" title="[% item.title %]">read more details</a>.</p>
 
 [% END %]
 

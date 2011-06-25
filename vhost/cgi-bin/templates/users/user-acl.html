@@ -18,25 +18,25 @@
 <input type="hidden" name="userid" value="[% data.userid %]" />
 
 <div class="box">
-    <table width="100%">
-    <tr><th width="90">User</th>
-        <th width="10"></th>
-        <td><strong>[% data.realname %]</strong></td>
-    </tr>
+<table width="100%" summary="User Permissions">
+<tr><th width="90">User</th>
+    <th width="10"></th>
+    <td><strong>[% data.realname %]</strong></td>
+</tr>
 
-    <tr><th>Access</th>
-        <th></th>
-        <td>[% FOR item = data.access %]
-            Folder: [% item.foldername %] / Access: [% item.accessname %] (<a href="pages.cgi?act=user-acldel&amp;userid=[% item.userid %]&amp;accessid=[% item.accessid %]&amp;folderid=[% item.folderid %]">remove</a>)<br/>
-            [% END %]
-        </td>
-    </tr>
-    <tr><th>Add</th>
-        <th></th>
-        <td>Folder: [% ddfolder %] / Access: [% ddaccess %]</td>
-    </tr>
+<tr><th>Access</th>
+    <th></th>
+    <td>[% FOR item = data.access %]
+        Folder: [% item.foldername %] / Access: [% item.accessname %] (<a href="pages.cgi?act=user-acldel&amp;userid=[% item.userid %]&amp;accessid=[% item.accessid %]&amp;folderid=[% item.folderid %]">remove</a>)<br/>
+        [% END %]
+    </td>
+</tr>
+<tr><th>Add</th>
+    <th></th>
+    <td>Folder: [% ddfolder %] / Access: [% ddaccess %]</td>
+</tr>
 	  <tr><td colspan="2"></td><td><input type="submit" name="submit" value="UPDATE" /></td></tr>
-    </table>
+</table>
 </div>
 
 </form>

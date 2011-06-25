@@ -9,18 +9,19 @@
 [% END -%]
 </ul>
 <ul>
-<li><a href='http://stats.cpantesters.org/cpanmail.html'>Find A Tester</a></li>
+<li><a href='http://stats.cpantesters.org/cpanmail.html' title="Find A Tester">Find A Tester</a></li>
 </ul>
 
 <h1>Profile</h1>
-<ul><li><a href="[% cgipath %]/pages.cgi?act=user-edit">Edit Profile</a></li></ul>
+<ul><li><a href="[% cgipath %]/pages.cgi?act=user-edit" title="Edit Your Profile">Edit Profile</a></li></ul>
 
 [% ELSE %]
 
 <h1>Search</h1>
 <form name="search" id="search" method="post" action="[% cgipath %]/pages.cgi">
 <input type="hidden" name="act" value="diary-search" />
-<input type="text" name="data" size="12" value="Search For..." onFocus="if (this.value=='Search For...') this.value='';"/>
+<input type="text" id="data" name="data" size="12" value="Search For..." onFocus="if (this.value=='Search For...') this.value='';" />
+<label for="data" class="accessibility">Enter search term</label>
 <input class="button" type="submit" name="Submit" value="GO" />
 </form>
 
@@ -33,14 +34,14 @@
 [% END -%]
 </ul>
 <ul>
-<li><a href='http://stats.cpantesters.org/cpanmail.html'>Find A Tester</a></li>
+<li><a href='http://stats.cpantesters.org/cpanmail.html' title="Find A Tester">Find A Tester</a></li>
 </ul>
 
 [% IF latest.comments.0 %]
 <h1>Recent Comments</h1>
 <p>
 [% FOREACH item = latest.comments %]
-<em><strong>[% item.author %]</strong></em> in <a href="/diary/[% item.articleid %]">[% item.title %]</a><br />
+<em><strong>[% item.author %]</strong></em> in <a href="/diary/[% item.articleid %]" title="[% item.title %]">[% item.title %]</a><br />
 [% END %]
 </p>
 [% END %]
@@ -48,7 +49,7 @@
 [% IF events.shortlist %]
 <h1>Events</h1>
 <ul>
-[% FOREACH item = events.shortlist %]<li><a href="/event/[% item.eventid %]">[% item.title %]</a> ([% item.eventdate %])</li>[% END %]
+[% FOREACH item = events.shortlist %]<li><a href="/event/[% item.eventid %]" title="[% item.title %]">[% item.title %]</a> ([% item.eventdate %])</li>[% END %]
 </ul>
 [% END %]
 
@@ -56,7 +57,7 @@
 <h1>Archives</h1>
 <p>
 [% FOREACH item = archive.diary %]
-<a href="/volume/[% item.volumeid %]">[% item.archdate %]</a> ([% item.counter %])<br />
+<a href="/volume/[% item.volumeid %]" title="Read the archives from [% item.archdate %]">[% item.archdate %]</a> ([% item.counter %])<br />
 [% END %]
 </p>
 [% END %]
@@ -72,13 +73,13 @@
 <img src="/images/icons/feed-icon-small.png" alt="CPAN Testers Wiki Atom 1.0 Feed" width="14" height="14" /> <a href="/rss/atom-1.0.xml" title="Atom 1.0">Atom 1.0</a></p>
 
 <p>
-<a href="http://technorati.com/faves?sub=addfavbtn&amp;add=http://blog.cpantesters.org"><img src="http://static.technorati.com/pix/fave/tech-fav-1.png" alt="Add to Technorati Favorites" width="145" height="25" /></a>
+<a href="http://technorati.com/faves?sub=addfavbtn&amp;add=http://blog.cpantesters.org" title="Add to Technorati"><img src="http://static.technorati.com/pix/fave/tech-fav-1.png" alt="Add to Technorati Favorites" width="145" height="25" /></a>
 </p>
 
 <div class="adverts">
 <h1>Perl Promotions</h1>
 <script type="text/javascript" src="http://adserver.szabgab.com/ads/direct_link_selflink.js?cnt=5&noself=1"></script>
-<p align="center">Ads provide by<br /> <a href="http://adserver.szabgab.com">The Perl Community AdServer</a>
+<p align="center">Ads provide by<br /> <a href="http://adserver.szabgab.com" title="The Perl Community AdServer">The Perl Community AdServer</a>
 </div>
 
 [% END %]

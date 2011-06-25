@@ -15,7 +15,7 @@
   <meta name="Generator"          content="Labyrinth" />
   <meta name="keywords"           content="perl,cpan,testing,testers" />
   <meta name="description"        content="The latest news and views about CPAN Testers" />
-  <meta name="copyright"          content="Copyright (C) 2007-2009 CPAN Testers" />
+  <meta name="copyright"          content="Copyright (C) 2007-2011 CPAN Testers" />
 
   <link rel="alternate"  type="application/atom+xml" title="Atom"    href="http://blog.cpantesters.org/rss/atom-1.0.xml" />
   <link rel="alternate"  type="application/rss+xml"  title="RSS 2.0" href="http://blog.cpantesters.org/rss/rss-2.0.xml" />
@@ -23,19 +23,19 @@
   <link rel="stylesheet" type="text/css" media="screen,projection,print" href="/css/layout2_setup.css" />
   <link rel="stylesheet" type="text/css" media="screen,projection,print" href="/css/layout2_text.css" />
 
-    [% INCLUDE "public/analytics.html" %]
+  [% INCLUDE "public/analytics.html" %]
 
 <!--
-    Site Layout, Design &amp; Development by Miss Barbell Productions
-    Original CSS/XHTML Template Design by Wolfgang.
+  Site Layout, Design &amp; Development by Miss Barbell Productions
+  Original CSS/XHTML Template Design by Wolfgang.
 
-    Valid XHTML 1.0 - http://validator.w3.org/check?uri=referer
-    Powered by LAMP (Linux, Apache, MySQL &amp; Perl) technologies.
-    Produced by LABYRINTH, a state of the art Website Management System
-    available from Miss Barbell Productions.
-    For more information contact Barbie <barbie@missbarbell.co.uk>
+  Valid XHTML 1.0 - http://validator.w3.org/check?uri=referer
+  Powered by LAMP (Linux, Apache, MySQL &amp; Perl) technologies.
+  Produced by LABYRINTH, a state of the art Website Management System
+  available from Miss Barbell Productions.
+  For more information contact Barbie <barbie@missbarbell.co.uk>
 
-    Smoke Box image copyright (c) Tyson Ibele 2004 (http://www.tysonibele.com/Main/gallery.htm)
+  Smoke Box image copyright (c) Tyson Ibele 2004 (http://www.tysonibele.com/Main/gallery.htm)
 -->
 
 </head>
@@ -55,7 +55,7 @@
 
         <!-- Sitelogo and sitename -->
         <div class="sitename">
-          <h1><a href="/">[% iname %]</a></h1>
+          <h1><a href="/" title="Home">[% iname %]</a></h1>
           <h3>blog.cpantesters.org</h3>
           <h2>[% title %]</h2>
         </div>
@@ -69,9 +69,9 @@
       <!-- Breadcrumbs -->
       <div class="header-breadcrumbs">
         <ul>
-          <li><a href="/">Home</a></li>
-          [% IF crumb3_name %]<li><a href="[% crumb3_href %]">[% crumb3_name %]</a></li>[% END %]
-          [% IF crumb2_name %]<li><a href="[% crumb2_href %]">[% crumb2_name %]</a></li>[% END %]
+          <li><a href="/" title="Home">Home</a></li>
+          [% IF crumb3_name %]<li><a href="[% crumb3_href %]" title="[% crumb3_name %]">[% crumb3_name %]</a></li>[% END %]
+          [% IF crumb2_name %]<li><a href="[% crumb2_href %]" title="[% crumb2_name %]">[% crumb2_name %]</a></li>[% END %]
           <li>[% crumb1_name %]</li>
         </ul>
       </div>
@@ -111,7 +111,7 @@
 
   </div> 
 
-  <p class="footnote"><a href="/article/terms">Terms &amp; Conditions</a></p>
+  <p class="footnote"><a href="/article/terms" title="Terms &amp; Conditions">Terms &amp; Conditions</a></p>
 
 </body>
 </html>

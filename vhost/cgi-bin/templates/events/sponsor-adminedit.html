@@ -27,7 +27,7 @@
 [% END %]
 
 <div class="boxer">
-<table class="blocker">
+<table class="blocker" summary="Sponsor Edit Form">
 [% IF data.sponsorid %]
 <tr><th>ID</th>
     <td class="alert"></td>
@@ -51,8 +51,8 @@
 <h2>Preview</h2>
 
 <div class="boxer">
-<table class="blocker">
-<tr><td>Sponsor:</td><td>[% IF data.sponsorlink %]<a href="[% data.sponsorlink %]">[% data.sponsor %]</a>[% ELSE %][% data.sponsor %][% END %]</td></tr>
+<table class="blocker" summary="Sponsor Preview">
+<tr><th>Sponsor:</th><td>[% IF data.sponsorlink %]<a href="[% data.sponsorlink %]" title="[% data.sponsor %]">[% data.sponsor %]</a>[% ELSE %][% data.sponsor %][% END %]</td></tr>
 </table>
 </div>
 

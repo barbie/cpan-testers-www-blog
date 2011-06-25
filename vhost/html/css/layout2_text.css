@@ -176,6 +176,8 @@ table.blocker th.named  { width: 100px; }
 .patch    { margin:0;padding:0; }
 .regular  { margin:0;padding:0; }
 
+.main-content .small    { font-size: 0.9em; }
+
 .reportgraph { left: 10px; }
 
 .main-navigation table { margin-left: 20px; }
@@ -301,3 +303,10 @@ span.tagcloud20 a {text-decoration: none;}
 .thumbleft  { float: left;  margin: 0 10px 10px 0; }
 
 .justified  { text-align: justify; }
+
+.main-content .diaryhead  { background-color: #eee; border-top: 1px solid #000; padding: 2px 5px; }
+.main-content .posted     { float: right; font-size: 0.9em; text-align: right; width: 190px; }
+.main-content .titled     { padding: 2px; font-size: 1.4em; }
+.main-content .diaryitem  { padding: 0px 10px 2px 10px; background-color: #f8f8f8; }
+.main-content .fileunder  { padding: 2px 5px; background-color: #eee; border-bottom: 1px solid #000; margin-bottom: 10px; }
+

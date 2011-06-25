@@ -22,22 +22,22 @@
 <form method="post" action="[% cgipath %]/pages.cgi">
 <input type="hidden" name="act" value="diary-csave" />
 <input type="hidden" name="commentid" value="[% comment.commentid %]" />
-<table class="blocker">
-<tr><th width="95">Subject</th>
+<table class="blocker" summary="Comment Form">
+<tr><th width="95"><label for="subject">Subject</label></th>
     <td width="10" class="alert">[% comment.subject_err %]</td>
-    <td><input type="text" name="subject" value="[% comment.subject %]" size="50" /></td>
+    <td><input type="text" id="subject" name="subject" value="[% comment.subject %]" size="50" /></td>
 </tr>
-<tr><th>Your Name *</th>
+<tr><th><label for="author">Your Name</label> *</th>
     <td class="alert">[% comment.author_err %]</td>
-    <td><input type="text" name="author" value="[% comment.author %]" size="50" /></td>
+    <td><input type="text" id="author" name="author" value="[% comment.author %]" size="50" /></td>
 </tr>
-<tr><th>Comment *</th>
+<tr><th><label for="body">Comment</label> *</th>
     <td class="alert">[% comment.body_err %]</td>
-    <td><textarea name="body" rows="15" cols="40" />[% comment.body %]</textarea></td>
+    <td><textarea id="body" name="body" rows="15" cols="40" />[% comment.body %]</textarea></td>
 </tr>
-<tr><th>Link</th>
+<tr><th><label for="href">Link</label></th>
     <td class="alert">[% comment.href_err %]</td>
-    <td><input type="text" name="href" value="[% comment.href %]" size="50" /></td>
+    <td><input type="text" id="href" name="href" value="[% comment.href %]" size="50" /></td>
 </tr>
 <tr><th></th>
     <td></td>

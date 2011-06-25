@@ -1,5 +1,11 @@
 Changes for the CPAN Testers Blog website
 
+1.02	current
+        - upgrade to Labyrinth 5.09.
+        - upgrade to Labyrinth-Plugin-Core 5.09.
+	- added titlemaps and pathmaps to settings.ini.
+	- WAI WCAG v2.0 compliance updates.
+
 1.01	20/06/2011
 	- updates to improve presentation.
 	- included a Terms & Conidtions page to meet EU Cookie Directive.

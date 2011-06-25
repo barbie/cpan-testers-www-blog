@@ -30,7 +30,7 @@
 [% END %]
 
 <div class="boxer">
-<table class="blocker">
+<table class="blocker" summary="Venue Edit Form">
 <tr><th>Name *</th>
     <td class="alert">[% data.venue_err %]</td>
     <td><input type="text" name="venue" size="50" value="[% data.venue %]" /></td></tr>
@@ -59,9 +59,9 @@
 <h2>Preview</h2>
 
 <div class="boxer">
-<table class="blocker">
-<tr><td>Venue:</td><td>[% IF preview.venuelink %]<a href="[% preview.venuelink %]">[% preview.venue %]</a>[% ELSE %][% preview.venue %][% END %]</td></tr>
-<tr><td>Address:</td><td>[% IF preview.addresslink %]<a href="[% preview.addresslink %]">[% preview.address %]</a>[% ELSE %][% preview.address %][% END %]</td></tr>
+<table class="blocker" summary="Venue Preview">
+<tr><th>Venue:</th><td>[% IF preview.venuelink %]<a href="[% preview.venuelink %]">[% preview.venue %]</a>[% ELSE %][% preview.venue %][% END %]</td></tr>
+<tr><th>Address:</th><td>[% IF preview.addresslink %]<a href="[% preview.addresslink %]">[% preview.address %]</a>[% ELSE %][% preview.address %][% END %]</td></tr>
 </table>
 </div>
 

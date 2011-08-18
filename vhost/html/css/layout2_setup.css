@@ -29,7 +29,7 @@
 /* HEADER */
 .header {width:900px; font-family:"trebuchet ms",arial,sans-serif;}
 .header-top {width:900px; height:80px; background:rgb(240,240,240) url(/images/layout/bg_head_top.jpg); overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
-.header-middle {width:900px; height:150px; background:#8A2BE2 url(/images/layout/banner-wiki.png); overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;position: relative;}
+.header-middle {width:900px; height:150px; background:#800080 url(/images/layout/banner-blog.png); overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
 .header-bottom {width:900px; height:40px; background:rgb(255,255,255) url(/images/layout/bg_head_breadcrumbs.jpg) repeat-y;}
 .header-breadcrumbs {clear:both; width:900px; padding:1.0em 0 1.5em 0; background:rgb(255,255,255) url(/images/layout/bg_head_breadcrumbs.jpg) repeat-y;}
 
@@ -37,12 +37,12 @@
 /*  HEADER SECTION  */
 /********************/
 .sitelogo {width:60px; height:40px; position:absolute; z-index:1; margin:22px 0 0 20px; background:url(/images/layout/bg_head_top_logo.jpg); }
-.sitename {width:600px; height:45px; margin:20px 0 0 160px;	position: absolute;}
+.sitename {width:600px; height:45px; position:absolute; z-index:1; margin:20px 0 0 160px; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
 .sitename h1 {font-size:240%;}
-.sitename h2 {margin:0px 0 0 0; color:white; font-size:120%;}
-.sitename h3 {margin:0px 0 0 0; color:#8A2BE2; font-size:120%;}
-.sitename a {text-decoration:none; color:#8A2BE2;}
-.sitename a:hover {text-decoration:none; color:blue;}
+.sitename h2 {margin:0 0 0 0; color:white; font-size:120%;}
+.sitename h3 {margin:0 0 0 0; color:#A020F0; font-size:120%;}
+.sitename a {text-decoration:none; color:#A020F0;}
+.sitename a:hover {text-decoration:none; color:#800080;}
 
 .nav1 {width:350px; position:absolute; z-index:3; margin:45px 0 0 550px;}
 .nav1 ul {float:right; padding:0 15px 0 0; font-weight:bold;}	

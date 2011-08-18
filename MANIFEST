@@ -82,6 +82,7 @@ vhost/cgi-bin/templates/public/layout.html
 vhost/cgi-bin/templates/public/popup.html
 vhost/cgi-bin/templates/public/rssfeed.xml
 vhost/cgi-bin/templates/public/sidebar.html
+vhost/cgi-bin/templates/public/social-bar.html
 vhost/cgi-bin/templates/public/tinymce.html
 vhost/cgi-bin/templates/users/user-acl.html
 vhost/cgi-bin/templates/users/user-adminedit.html
@@ -105,7 +106,7 @@ vhost/html/favicon.ico
 vhost/html/images/blank.png
 vhost/html/images/icons/feed-icon-large.png
 vhost/html/images/icons/feed-icon-small.png
-vhost/html/images/layout/banner-wiki.png
+vhost/html/images/layout/banner-blog.png
 vhost/html/images/layout/bg_bullet_arrow.gif
 vhost/html/images/layout/bg_bullet_full_1.gif
 vhost/html/images/layout/bg_bullet_full_2.gif

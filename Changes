@@ -5,6 +5,10 @@ Changes for the CPAN Testers Blog website
         - upgrade to Labyrinth-Plugin-Core 5.09.
 	- added titlemaps and pathmaps to settings.ini.
 	- WAI WCAG v2.0 compliance updates.
+	- update layout to include an update notification.
+	- added a new social media bar
+	- fixed images and css incorrectly pasted from wiki distro
+	- revised banner logo image by Jon 'JJ' Allen.
 
 1.01	20/06/2011
 	- updates to improve presentation.

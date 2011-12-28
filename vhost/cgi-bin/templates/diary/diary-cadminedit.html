@@ -22,6 +22,7 @@
 <form method="post" action="[% cgipath %]/pages.cgi">
 <input type="hidden" name="act" value="diary-csave" />
 <input type="hidden" name="commentid" value="[% comment.commentid %]" />
+<input type="hidden" name="publish" value="[% comment.publish %]" />
 <table class="blocker" summary="Comment Form">
 <tr><th width="95"><label for="subject">Subject</label></th>
     <td width="10" class="alert">[% comment.subject_err %]</td>

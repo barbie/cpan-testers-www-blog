@@ -1,5 +1,8 @@
 Changes for the CPAN Testers Blog website
 
+1.03	current
+	- fixed publish status when saving edited comments.
+
 1.02	18/08/2011
         - upgrade to Labyrinth 5.09.
         - upgrade to Labyrinth-Plugin-Core 5.09.

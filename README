@@ -1,0 +1,60 @@
+CPAN-Tester-WWW-Blog
+====================
+
+This distribution contains the files used to run and manage the CPAN Testers 
+Blog website.
+
+The CPAN Testers Blog website is built on top of the Labyrinth Website 
+Management System. As such, the code to drive the website is conatined within
+the Labyrinth and associated plugin prerequisites. In order to define the 
+website in terms of functionality, layout and style, the files within the
+'./vhost' directory of this distribution should be installed into your web
+server's virtual host directory.
+
+Included in the distribution is a C<vhost.conf> file, which contains the 
+virtual host settings to implement the site using the Apache Web Server.
+
+INSTALLATION
+
+This distribution is in two parts, the first is the installer and the second
+are the website files.
+
+In the first instance the installer will install Labyrinth and associated 
+plugins. These library modules form the engine of the website. These can be
+installed as
+
+  perl Makefile.PL
+  make
+  make test
+  make install
+
+In the second instance, download the latest tarball and copy the contents of
+the 'vhost' directory into the directory you plan to use to provide access to
+the Blog. Create an appropriate database in MySQL and load the contents of the
+SQL file, ./cgi-bin/db/cpanblog-base.sql. Note that this only provides the 
+base tables and contents, none of the current CPAN Testers Blog posts. 
+
+You then need to update the configuration file, ./cgi-bin/config/settings.ini,
+with the necessary database connection settings, together with the correct
+paths to your virtual directory. Then you'll need update the run script,
+./cgi-bin/pages.cgi, to point your configuration file.
+
+Finally, you'll need to update your web server as necessary. The CPAN Testers
+Blog runs under Apache2, and the vhost file, ./vhosts.conf, can be adapted as
+appropriate for other web servers applications.
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2008-2012 Barbie for Miss Barbell Productions.
+
+This distribution is free software; you can redistribute it and/or modify it 
+under the Artistic License v2.
+
+ADDITIONAL COPYRIGHT
+
+This distribution includes TinyMCE [1], a Javascript WYSIWYG Editor used within
+the site. TinyMCE is distributed under the GNU Lesser General Public License 
+Version 2.1, and all files within the './vhost/html/js/tiny_mce' directory
+are copyright of the TinyMCE project.
+
+[1] http://tinymce.moxiecode.com/

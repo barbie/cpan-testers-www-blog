@@ -5,6 +5,7 @@ Changes for the CPAN Testers Blog website
         - upgrade to Labyrinth 5.12.
         - removed social media bar due to dubious practices.
         - added CPAN Testers Sponsors.
+        - added README.
 
 1.02    18/08/2011
         - upgrade to Labyrinth 5.09.

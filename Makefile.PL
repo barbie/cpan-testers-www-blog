@@ -3,7 +3,7 @@ WriteMakefile(
     NAME                => 'CPAN::Testers::WWW::Blog',
     'VERSION_FROM'      => 'lib/CPAN/Testers/WWW/Blog.pm',
     PREREQ_PM           => {
-        'Labyrinth'                             => '5.09',
+        'Labyrinth'                             => '5.12',
         'Labyrinth::Plugin::Core'               => '5.09',
         'Labyrinth::Plugin::Articles::Diary'    => '1.00',
         'Labyrinth::Plugin::Event'              => '1.01',

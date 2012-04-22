@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                CPAN::Testers::WWW::Blog
-version:             1.02
+version:             1.03
 abstract:            The CPAN Testers Blog website
 author:
   - Barbie <barbie@cpan.org>
@@ -10,7 +10,7 @@ distribution_type:   module
 installdirs:         site
 
 requires:
-  Labyrinth:                          5.09
+  Labyrinth:                          5.12
   Labyrinth::Plugin::Core:            5.09
   Labyrinth::Plugin::Articles::Diary: 1.00
   Labyrinth::Plugin::Event:           1.00
@@ -26,7 +26,7 @@ build_requires:
 provides:
   CPAN::Testers::WWW::Blog:
     file:     lib/CPAN/Testers/WWW/Blog.pm
-    version:  1.02
+    version:  1.03
 
 no_index:
   directory:

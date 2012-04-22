@@ -1,24 +1,27 @@
 Changes for the CPAN Testers Blog website
 
-1.03	current
-	- fixed publish status when saving edited comments.
+1.03    current
+        - fixed publish status when saving edited comments.
+        - upgrade to Labyrinth 5.12.
+        - removed social media bar due to dubious practices.
+        - added CPAN Testers Sponsors.
 
-1.02	18/08/2011
+1.02    18/08/2011
         - upgrade to Labyrinth 5.09.
         - upgrade to Labyrinth-Plugin-Core 5.09.
-	- added titlemaps and pathmaps to settings.ini.
-	- WAI WCAG v2.0 compliance updates.
-	- update layout to include an update notification.
-	- added a new social media bar
-	- fixed images and css incorrectly pasted from wiki distro
-	- revised banner logo image by Jon 'JJ' Allen.
+        - added titlemaps and pathmaps to settings.ini.
+        - WAI WCAG v2.0 compliance updates.
+        - update layout to include an update notification.
+        - added a new social media bar
+        - fixed images and css incorrectly pasted from wiki distro
+        - revised banner logo image by Jon 'JJ' Allen.
 
-1.01	20/06/2011
-	- updates to improve presentation.
-	- included a Terms & Conidtions page to meet EU Cookie Directive.
-	- updates to diary and user templates for images.
-	- updates to templates for usability compliance.
-	- fixes for Posted lookups.
+1.01    20/06/2011
+        - updates to improve presentation.
+        - included a Terms & Conidtions page to meet EU Cookie Directive.
+        - updates to diary and user templates for images.
+        - updates to templates for usability compliance.
+        - fixes for Posted lookups.
         - upgrade to Labyrinth 5.08.
         - upgrade to Labyrinth-Plugin-Core 5.08.
 
@@ -29,28 +32,28 @@ Changes for the CPAN Testers Blog website
         - upgrade to Labyrinth-Plugin-Event 1.00.
         - packaged for CPAN release.
 
-0.06	20/11/2010
-	- user lists now hide special users (Guest), restrict access to users
-	  of the same or higher access, and prevent priveledged users from
-	  being deleted.
-	- user acls fixed to correctly list folders and access.
-	- folder list driven by database, added FolderName function.
-	- update to admin templates to make them consistent across sites.
+0.06    20/11/2010
+        - user lists now hide special users (Guest), restrict access to users
+          of the same or higher access, and prevent priveledged users from
+          being deleted.
+        - user acls fixed to correctly list folders and access.
+        - folder list driven by database, added FolderName function.
+        - update to admin templates to make them consistent across sites.
 
 0.05    29/09/2010
-	- repositioned site boxes to avoid text and logo clashing.
+        - repositioned site boxes to avoid text and logo clashing.
 
-0.04	16/09/2010
-	- added links to Metabase and Labyrinth.
-	- upgraded to Labyrinth v5.00.
+0.04    16/09/2010
+        - added links to Metabase and Labyrinth.
+        - upgraded to Labyrinth v5.00.
 
-0.03	14/01/2010
-	- added quote.html
-	- added Analysis to site family lists.
+0.03    14/01/2010
+        - added quote.html
+        - added Analysis to site family lists.
 
-0.02	04/07/2009
-	- added TinyMCE support to comments for public users.
-	- fixed bug in saving comments for admin users.
+0.02    04/07/2009
+        - added TinyMCE support to comments for public users.
+        - fixed bug in saving comments for admin users.
 
-0.01	17/05/2009
-	- First released version, based on Labyrinth v4.16
+0.01    17/05/2009
+        - First released version, based on Labyrinth v4.16

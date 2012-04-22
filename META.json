@@ -23,6 +23,7 @@
     "prereqs" : {
         "runtime" : {
             "requires" : {
+                "perl": "5.006",
                 "Labyrinth": "5.12",
                 "Labyrinth::Plugin::Core": "5.09",
                 "Labyrinth::Plugin::Articles::Diary": "1.00",
@@ -31,11 +32,12 @@
         },
         "test" : {
             "requires": {
+                "IO::File": "0",
                 "Test::More": "0.70"
             },
             "recommends": {
-                "Test::CPAN::Meta": "0.13",
-                "Test::CPAN::Meta::JSON": "0.10",
+                "Test::CPAN::Meta": "0",
+                "Test::CPAN::Meta::JSON": "0",
                 "Test::Pod": "1.00",
                 "Test::Pod::Coverage": "0.08"
             }

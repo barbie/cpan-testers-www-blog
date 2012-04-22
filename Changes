@@ -1,5 +1,8 @@
 Changes for the CPAN Testers Blog website
 
+1.04    22/04/2012
+	- fixed META.json test.
+
 1.03    22/04/2012
         - fixed publish status when saving edited comments.
         - upgrade to Labyrinth 5.12.

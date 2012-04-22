@@ -16,10 +16,10 @@ WriteMakefile(
 
         # prereqs
         'Labyrinth'                             => '5.12',
+        'Labyrinth::DIUtils::ImageMagick'       => '5.04',
         'Labyrinth::Plugin::Core'               => '5.09',
         'Labyrinth::Plugin::Articles::Diary'    => '1.00',
         'Labyrinth::Plugin::Event'              => '1.01',
-        'Labyrinth::DIUtils::ImageMagick'       => '5.04',
 
         # for testing
         'IO::File'                              => 0,       # for testing

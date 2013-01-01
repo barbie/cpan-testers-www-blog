@@ -137,7 +137,7 @@
 [% IF item.type == 1 %]
 
     [% IF item.link %]
-    [% IF item.align  %][% class  = item.align  %][% ELSE %][% class  = "inline" %][% END %]
+    [% IF item.align  %][% class = item.align %][% ELSE %][% class = "inline" %][% END %]
     [% IF item.href %]
         <div class="thumb[% item.align %]" >
         <a href='[% item.href %]'><img class="[% class %]" src="/[% item.link %]" alt="[% item.tag %]"
@@ -152,7 +152,6 @@
         [% IF item.width  %]width="[% item.width %]"[% END %]
         [% IF item.height %]height="[% item.height %]"[% END %]
         />
-        [% IF item.tag %]<p>[% item.tag %]</p>[% END %]
         </div>
     [% END %]
     [% END %]

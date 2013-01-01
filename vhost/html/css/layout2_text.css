@@ -329,6 +329,7 @@ table.blocker th.named  { width: 100px; }
     padding-top: 5px;
 }
 
+.main-content .thumb1,
 .main-content .thumbleft {
     float: left;
     margin: 0 5px 4px 0;
@@ -337,6 +338,7 @@ table.blocker th.named  { width: 100px; }
     text-align: center;
 }
 
+.main-content .thumb2,
 .main-content .thumbcenter {
     display: block;
     margin: 0 auto 4px auto;
@@ -345,14 +347,18 @@ table.blocker th.named  { width: 100px; }
     text-align: center;
 }
 
+.main-content .thumb3,
 .main-content .thumbright {
     float: right;
-    margin: 0 0 4px 5px;
+    margin: 0 0 5px 10px;
     padding: 4px;
     border: 1px solid #a0a0a0;
     text-align: center;
 }
 
+.main-content .thumb1 p,
+.main-content .thumb2 p,
+.main-content .thumb3 p,
 .main-content .thumbleft   p,
 .main-content .thumbcenter p,
 .main-content .thumbright  p {
@@ -360,6 +366,9 @@ table.blocker th.named  { width: 100px; }
     padding: 0 0 -15px 0;
 }
 
+.main-content .thumb1 img,
+.main-content .thumb2 img,
+.main-content .thumb3 img,
 .main-content .thumbleft   img,
 .main-content .thumbcenter img,
 .main-content .thumbright  img {
@@ -367,6 +376,9 @@ table.blocker th.named  { width: 100px; }
     padding: 0px;
 }
 
+.main-content .thumb1 a img,
+.main-content .thumb2 a img,
+.main-content .thumb3 a img,
 .main-content .thumbleft   a img,
 .main-content .thumbcenter a img,
 .main-content .thumbright  a img {

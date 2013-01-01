@@ -16,7 +16,7 @@
 [% ELSE %]
 [% IF item.type == 1 %]
     [% IF item.link %]
-    [% IF item.align  %][% class  = item.align  %][% ELSE %][% class  = "inline" %][% END %]
+    [% IF item.align  %][% class = 'thumb' _ item.align %][% ELSE %][% class = "inline" %][% END %]
     [% IF item.href %]
         <a href='[% item.href %]'><img class="[% class %]" src="[% webpath %]/[% item.link %]" alt="[% item.tag %]"
         [% IF item.align  %]align="[% item.align %]"[% END %]

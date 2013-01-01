@@ -415,3 +415,7 @@ table.blocker th.named  { width: 100px; }
 
 .accessibility  { display: none }
 .update20110712 { display: none }
+
+#iheart a img,
+#iheart a:hover img,
+#iheart a:visited img { border:0 }

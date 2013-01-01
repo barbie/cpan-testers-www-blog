@@ -1,6 +1,7 @@
 Changes for the CPAN Testers Blog website
 
         - change file dates changed to meet W3CDTF standards.
+        - added iheart styles.
 
 1.04    2012-04-22
         - fixed META.json test.

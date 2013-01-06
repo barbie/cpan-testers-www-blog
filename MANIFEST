@@ -81,6 +81,7 @@ vhost/cgi-bin/templates/public/error_message.html
 vhost/cgi-bin/templates/public/footer.html
 vhost/cgi-bin/templates/public/layout.html
 vhost/cgi-bin/templates/public/popup.html
+vhost/cgi-bin/templates/public/quote.html
 vhost/cgi-bin/templates/public/rssfeed.xml
 vhost/cgi-bin/templates/public/sidebar.html
 vhost/cgi-bin/templates/public/social-bar.html
@@ -377,6 +378,7 @@ vhost/html/js/tiny_mce/utils/editable_selects.js
 vhost/html/js/tiny_mce/utils/form_utils.js
 vhost/html/js/tiny_mce/utils/mctabs.js
 vhost/html/js/tiny_mce/utils/validate.js
+vhost/html/pdf/privacypolicy.pdf
 vhost/toolkit/rssfeeds.pl
 vhost/toolkit/rssfeeds.sh
 vhost/toolkit/sumhits.pl

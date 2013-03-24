@@ -383,6 +383,7 @@ vhost/html/js/tiny_mce/utils/form_utils.js
 vhost/html/js/tiny_mce/utils/mctabs.js
 vhost/html/js/tiny_mce/utils/validate.js
 vhost/html/pdf/privacypolicy.pdf
+vhost/html/robots.txt
 vhost/toolkit/rssfeeds.pl
 vhost/toolkit/rssfeeds.sh
 vhost/toolkit/sumhits.pl

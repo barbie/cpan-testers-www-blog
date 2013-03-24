@@ -1,5 +1,14 @@
 Changes for the CPAN Testers Blog website
 
+1.06    2013-03-24
+        - optimised static images.
+        - minimised CSS.
+        - added robots.txt.
+        - change to JSON for iheart 
+        - split posted by and on onto 2 different lines
+        - upgrade to Labyrinth 5.15.
+        - added block.grango.org to Block/Allow IPs
+
 1.05    2013-01-06
         - change file dates changed to meet W3CDTF standards.
         - added iheart styles.

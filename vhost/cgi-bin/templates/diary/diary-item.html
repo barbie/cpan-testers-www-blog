@@ -8,7 +8,7 @@
 [% INCLUDE "public/tinymce.html" %]
 
 <div class="diaryhead">
-    <div class="posted">Posted by <a href="/user/[% article.data.userid %]" title="About [% article.data.name %]">[% article.data.name %]</a> on [% article.data.postdate %]</div>
+    <div class="posted">Posted by <a href="/user/[% article.data.userid %]" title="About [% article.data.name %]">[% article.data.name %]</a><br />on [% article.data.postdate %]</div>
     <div class="titled"><a href="/diary/[% article.data.articleid %]" rel="bookmark" title="[% article.data.title %]">[% article.data.title %]</a></div>
 </div>
 
@@ -58,9 +58,11 @@
       <br />
     [% END %]
       <a href="/diary/[% article.data.articleid %]#comments" title="View comments">
-      [% IF article.comments == 0 %]NO COMMENTS[% END %]
-      [% IF article.comments == 1 %]1 COMMENT[% END %]
-      [% IF article.comments > 1 %][% article.comments %] COMMENTS[% END %]
+      [% IF article.comments && article.comments > 0 %]
+        [% article.comments %] COMMENT[% IF article.comments > 1 %]S[% END %]
+      [% ELSE %]
+        NO COMMENTS
+      [% END %]
       </a>
     [% IF user.admin %]
     | Edit | Delete

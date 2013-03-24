@@ -9,7 +9,7 @@
 [% FOREACH article = mainarts %]
 
 <div class="diaryhead">
-    <div class="posted">Posted by <a href="/user/[% article.data.userid %]" title="About [% article.data.name %]">[% article.data.name %]</a> on [% article.data.postdate %]</div>
+    <div class="posted">Posted by <a href="/user/[% article.data.userid %]" title="About [% article.data.name %]">[% article.data.name %]</a><br />on [% article.data.postdate %]</div>
     <div class="titled"><a href="/diary/[% article.data.articleid %]" rel="bookmark" title="[% article.data.title %]">[% article.data.title %]</a></div>
 </div>
 

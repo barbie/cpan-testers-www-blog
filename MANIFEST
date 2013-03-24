@@ -102,12 +102,15 @@ vhost/cgi-bin/templates/users/user-pass.html
 vhost/cgi-bin/templates/users/user-registered.html
 vhost/cgi-bin/templates/users/user-registration.html
 vhost/dumper.sh
+vhost/html/css/layout-min.css
 vhost/html/css/layout2_setup.css
 vhost/html/css/layout2_text.css
 vhost/html/favicon.ico
 vhost/html/images/blank.png
 vhost/html/images/icons/feed-icon-large.png
 vhost/html/images/icons/feed-icon-small.png
+vhost/html/images/icons/feed-icon-small.gif
+vhost/html/images/icons/technorati-fav-button.png
 vhost/html/images/layout/banner-blog.png
 vhost/html/images/layout/bg_bullet_arrow.gif
 vhost/html/images/layout/bg_bullet_full_1.gif

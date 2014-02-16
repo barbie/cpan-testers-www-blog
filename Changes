@@ -1,5 +1,6 @@
 Changes for the CPAN Testers Blog website
 
+1.07    2014-02-16
         - removed unused files.
         - template cleanups.
         - upgrade to Labyrinth-5.20.

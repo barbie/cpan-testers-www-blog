@@ -17,14 +17,14 @@
 [% FOREACH item = article.body %]
 [% IF item.type == 1 %]
     [% IF item.link %]
-    [% IF item.align  %][% class  = item.align  %][% ELSE %][% class  = "inline" %][% END %]
+    [% IF item.align  %][% class = item.align %][% ELSE %][% class = "inline" %][% END %]
     [% IF item.href %]
         <div class="thumb[% item.align %]" >
         <a href='[% item.href %]' title="[% item.tag %]"><img src="[% webpath %]/[% item.link %]" alt="[% item.tag %]"
         [% IF item.width  %]width="[% item.width %]"[% END %]
         [% IF item.height %]height="[% item.height %]"[% END %]
         /></a>
-        [% IF item.tag %]<p>[% item.tag %][% END %]
+        [% IF item.tag %]<p>[% item.tag | html %]</p>[% END -%]
         </div>
     [% ELSE %]
         <div class="thumb[% item.align %]" >
@@ -32,7 +32,7 @@
         [% IF item.width  %]width="[% item.width %]"[% END %]
         [% IF item.height %]height="[% item.height %]"[% END %]
         />
-        [% IF item.tag %]<p>[% item.tag %][% END %]
+        [% IF item.tag %]<p>[% item.tag | html %]</p>[% END -%]
         </div>
     [% END %]
     [% END %]
@@ -41,7 +41,7 @@
         [% item.body %]
 [% END %]
 [% IF item.type == 3 %]
-        <a href='[% item.href %]' title="[% item.tag %]">[% item.body %]</a>
+        <a href='[% item.href %]' title="[% item.tag | html %]">[% item.body %]</a>
 [% END %]
 [% END %]
 </div>
@@ -70,7 +70,7 @@
     </div>
 
 [% IF article.data.latest %]
-<p id="comments">Comments Disabled.
+<p id="comments">Comments Disabled.</p>
 [% ELSE %]
 <h3 id="comments">Comments</h3>
 
@@ -121,7 +121,7 @@ was done in error and you were posting a relevant comment, please contact the
 </tr>
 <tr><th><label for="body">Comment</label> *</th>
     <td class="alert">[% comment.body_err %]</td>
-    <td><textarea id="body" name="body" rows="20" cols="45" />[% data.body %]</textarea></td>
+    <td><textarea id="body" name="body" rows="20" cols="45">[% data.body %]</textarea></td>
 </tr>
 <tr><th><label for="href">Link</label></th>
     <td class="alert">[% data.href_err %]</td>

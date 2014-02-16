@@ -17,14 +17,14 @@
 
     [% FOREACH item = article.body %]
     [% IF item.type == 1 %]
-    [% IF item.align  %][% class  = item.align  %][% ELSE %][% class  = "inline" %][% END %]
+    [% IF item.align  %][% class = item.align %][% ELSE %][% class = "inline" %][% END %]
     [% IF item.href %]
         <div class="thumb[% item.align %]" >
         <a href='[% item.href %]' title="[% item.tag %]"><img src="[% webpath %]/[% item.link %]" alt="[% item.tag %]"
         [% IF item.width  %]width="[% item.width %]"[% END %]
         [% IF item.height %]height="[% item.height %]"[% END %]
         /></a>
-        [% IF item.tag %]<p>[% item.tag %]</p>[% END -%]
+        [% IF item.tag %]<p>[% item.tag | html %]</p>[% END -%]
         </div>
     [% ELSE %]
         <div class="thumb[% item.align %]" >
@@ -32,7 +32,7 @@
         [% IF item.width  %]width="[% item.width %]"[% END %]
         [% IF item.height %]height="[% item.height %]"[% END %]
         />
-        [% IF item.tag %]<p>[% item.tag %]</p>[% END -%]
+        [% IF item.tag %]<p>[% item.tag | html %]</p>[% END -%]
         </div>
     [% END %]
     [% END %]
@@ -40,7 +40,7 @@
         <div class="justified">[% item.body %]</div>
     [% END %]
     [% IF item.type == 3 %]
-        <div class="justified"><a href='[% item.href %]' title="[% item.tag %]">[% item.body %]</a></div>
+        <div class="justified"><a href='[% item.href %]' title="[% item.tag | html %]">[% item.body %]</a></div>
     [% END %]
     [% END %]
 </div>

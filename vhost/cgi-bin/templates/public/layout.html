@@ -58,7 +58,7 @@
         <div class="sitename">
           <h1><a href="/" title="Home">[% iname %]</a></h1>
           <h3>blog.cpantesters.org</h3>
-          <h2>[% title %]</h2>
+          <h2>[% title | html %]</h2>
         </div>
 
       </div>
@@ -105,7 +105,7 @@
         </div>
 
         <!-- Pagetitle -->
-        <h1 class="pagetitle">[% title %]</h1>
+        <h1 class="pagetitle">[% title | html %]</h1>
         <div class="column1-unit">
 
           [% body %]
@@ -124,6 +124,6 @@
   <p class="footnote"><a href="/article/terms" title="Terms &amp; Conditions">Terms &amp; Conditions</a></p>
 
   <script type="text/javascript" src="/js/iheart.js"></script>
-  
+
 </body>
 </html>

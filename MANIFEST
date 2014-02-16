@@ -103,8 +103,6 @@ vhost/cgi-bin/templates/users/user-registered.html
 vhost/cgi-bin/templates/users/user-registration.html
 vhost/dumper.sh
 vhost/html/css/layout-min.css
-vhost/html/css/layout2_setup.css
-vhost/html/css/layout2_text.css
 vhost/html/favicon.ico
 vhost/html/images/blank.png
 vhost/html/images/icons/feed-icon-large.png

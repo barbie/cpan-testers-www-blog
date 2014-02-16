@@ -1,4 +1,7 @@
 Changes for the CPAN Testers Blog website
+=========================================
+
+        - removed unused files.
 
 1.06    2013-03-24
         - optimised static images.

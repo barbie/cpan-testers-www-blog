@@ -383,5 +383,6 @@ vhost/html/pdf/privacypolicy.pdf
 vhost/html/robots.txt
 vhost/toolkit/rssfeeds.pl
 vhost/toolkit/rssfeeds.sh
+vhost/toolkit/sumhits-settings.ini
 vhost/toolkit/sumhits.pl
 vhost/vhosts.conf

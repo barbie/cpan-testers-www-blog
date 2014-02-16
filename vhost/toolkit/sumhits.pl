@@ -46,6 +46,9 @@ my %options;
 GetOptions( \%options, 'datetime|d' );
 my $datetime = $options{datetime} ? $options{datetime} : time() - 60 * 60 * 24 * 7 * 6;
 
+my @dt = localtime($datetime);
+printf "datetime=%04d-%02d-%02d %02d:%02d:%02d\n", $dt[5]+1900, $dt[4]+1, $dt[3], $dt[2], $dt[1], $dt[0];
+
 my @areas = $dbi->GetQuery('hash','GetHitAreas');
 for my $rs (@areas) {
     my $area = $rs->{area};
@@ -55,12 +58,25 @@ for my $rs (@areas) {
         next    if($row->{number} == 1 && $row->{createdate} == 0);
 
         $dbi->DoQuery('StartTrans');
-        my $rows = $dbi->DoQuery('DelAHit',$datetime,$row->{area},$row->{pageid},$row->{photoid},$row->{query});
+        my $rows;
+        if($row->{query}) {
+            $rows = $dbi->DoQuery('DelAHit',$datetime,$row->{area},$row->{pageid},$row->{photoid},$row->{query});
+        } else {
+            $rows = $dbi->DoQuery('DelAHit2',$datetime,$row->{area},$row->{pageid},$row->{photoid});
+        }
         $dbi->DoQuery('AddAHit',$row->{counter},$row->{area},$row->{pageid},$row->{photoid},$row->{query},0);
         $dbi->DoQuery('CommitTrans');
-        printf "[%6d] %6d,%15s,%3d,%3d,%s\n", $rows, $row->{counter},$row->{area},$row->{pageid},$row->{photoid},$row->{query};
+
+        $rows ||= 0;
+        $row->{pageid}  ||= 0;
+        $row->{photoid} ||= 0;
+        $row->{counter} ||= 0;
+        $row->{query}   ||= '';
+
+        printf "[%6d,%6d] %9d,%20s,%4d,%5d,%s\n", $rows,$row->{number},$row->{counter},$row->{area},$row->{pageid},$row->{photoid},$row->{query};
     }
 }
+
 
 __END__
 
@@ -71,7 +87,7 @@ Miss Barbell Productions, L<http://www.missbarbell.co.uk/>
 
 =head1 COPYRIGHT & LICENSE
 
-  Copyright (C) 2002-2011 Barbie for Miss Barbell Productions
+  Copyright (C) 2002-2014 Barbie for Miss Barbell Productions
   All Rights Reserved.
 
   This module is free software; you can redistribute it and/or

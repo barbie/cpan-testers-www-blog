@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.1.41, for debian-linux-gnu (i486)
+-- MySQL dump 10.13  Distrib 5.5.34, for debian-linux-gnu (i686)
 --
 -- Host: localhost    Database: cpanblog
 -- ------------------------------------------------------
--- Server version	5.1.41-3ubuntu12.10
+-- Server version	5.5.34-0ubuntu0.12.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -132,11 +132,6 @@ CREATE TABLE `comments` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `comments`
---
-
-
---
 -- Table structure for table `events`
 --
 
@@ -219,18 +214,19 @@ DROP TABLE IF EXISTS `folders`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `folders` (
   `folderid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `foldername` varchar(255) DEFAULT NULL,
-  `ref` varchar(255) DEFAULT NULL,
+  `path` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `parent` int(10) DEFAULT NULL,
-  PRIMARY KEY (`folderid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `accessid` int(10) NOT NULL DEFAULT '5',
+  PRIMARY KEY (`folderid`),
+  KEY `IXPATH` (`path`)
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `folders`
 --
 
-INSERT INTO `folders` VALUES (1,'Site','1',0);
+INSERT INTO `folders` VALUES (1,'public',0,1);
 
 --
 -- Table structure for table `groups`
@@ -279,11 +275,6 @@ CREATE TABLE `hits` (
   KEY `IXDATE` (`createdate`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `hits`
---
-
 
 --
 -- Table structure for table `images`
@@ -351,11 +342,6 @@ CREATE TABLE `imetadata` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `imetadata`
---
-
-
---
 -- Table structure for table `ipindex`
 --
 
@@ -369,11 +355,6 @@ CREATE TABLE `ipindex` (
   PRIMARY KEY (`ipaddr`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `ipindex`
---
-
 
 --
 -- Table structure for table `ixfolderrealm`
@@ -490,11 +471,6 @@ CREATE TABLE `optimages` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `optimages`
---
-
-
---
 -- Table structure for table `options`
 --
 
@@ -609,10 +585,6 @@ CREATE TABLE `sessions` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `sessions`
---
-
---
 -- Table structure for table `sponsors`
 --
 
@@ -676,11 +648,6 @@ CREATE TABLE `updates` (
   KEY `IXPAGE` (`pageid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `updates`
---
-
 
 --
 -- Table structure for table `users`
@@ -771,10 +738,6 @@ CREATE TABLE `volumes` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `volumes`
---
-
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -785,4 +748,4 @@ CREATE TABLE `volumes` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-04-08  7:49:47
+-- Dump completed on 2014-02-16 21:20:36

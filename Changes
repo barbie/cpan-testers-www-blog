@@ -1,8 +1,9 @@
 Changes for the CPAN Testers Blog website
-=========================================
 
         - removed unused files.
         - template cleanups.
+        - upgrade to Labyrinth-5.20.
+        - upgrade to Labyrinth-Plugin-Core-5.14.
 
 1.06    2013-03-24
         - optimised static images.

@@ -7,6 +7,7 @@ Changes for the CPAN Testers Blog website
         - upgrade to Labyrinth-Plugin-Event 1.04.
         - fixed distribution name in META.
         - added LICENSE file.
+        - added nofollow link attributes to iheart.js.
 
 1.07    2014-02-16
         - removed unused files.

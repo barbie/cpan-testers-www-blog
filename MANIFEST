@@ -1,5 +1,6 @@
 Changes
 lib/CPAN/Testers/WWW/Blog.pm
+LICENSE
 Makefile.PL
 MANIFEST
 META.json

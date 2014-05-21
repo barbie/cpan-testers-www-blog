@@ -8,6 +8,7 @@ Changes for the CPAN Testers Blog website
         - fixed distribution name in META.
         - added LICENSE file.
         - added nofollow link attributes to iheart.js.
+        - upgraded comment management.
 
 1.07    2014-02-16
         - removed unused files.

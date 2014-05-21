@@ -11,6 +11,21 @@
 
 [% INCLUDE "public/tinymce.html" %]
 
+<div class="post justified">
+  <h2>[% comment.title %][% IF comment.subject ; THEN ; ' : ' _ comment.subject ; END %]</h2>
+  [% comment.body %]
+  <p class="small">Posted by <em>[% comment.author %]</em> on <em>[% date.format(comment.createdate, '%e %b %Y') %]</em> ([% comment.ipaddr %])
+    <br />
+    Contact: [% comment.href | html %]
+    <br />
+
+      <a href="[% cgipath %]/pages.cgi?act=diary-cmark&amp;mark=block&amp;commentid=[% comment.commentid %]">Block</a>
+    | <a href="[% cgipath %]/pages.cgi?act=diary-cmark&amp;mark=allow&amp;commentid=[% comment.commentid %]">Allow</a>
+    | <a href="[% cgipath %]/pages.cgi?act=diary-cpromote&amp;commentid=[% comment.commentid %]">Approve</a>
+    | <a href="[% cgipath %]/pages.cgi?act=diary-cdelete&amp;commentid=[% comment.commentid %]">Delete</a>
+    | <a href="[% cgipath %]/pages.cgi?act=diary-clist">Back to Comment Admin</a></p>
+</div>
+
 
 [% IF comment.subject %]<h4>[% comment.subject %]</h4>[% END %]
 [% comment.body %]

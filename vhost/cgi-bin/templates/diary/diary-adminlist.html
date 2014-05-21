@@ -7,8 +7,8 @@
 %]
 
 <p> <a href="[% cgipath %]/pages.cgi?act=diary-add" title="add a diary entry">add a diary entry</a>
-[% IF comcount %]
-|   <a href="[% cgipath %]/pages.cgi?act=diary-clist" title="comment approval">comment approval ([% comcount %])</a>[% END %]
+[% IF page.comments %]
+|   <a href="[% cgipath %]/pages.cgi?act=diary-clist" title="comment approval">comment approval ([% page.comments %])</a>[% END %]
 </p>
 
 <form name="datalist" method="post" action="[% cgipath %]/pages.cgi">

@@ -34,7 +34,7 @@ my @types = (
 #----------------------------------------------------------
 # Code
 
-Labyrinth::Globals::LoadSettings("$BASE/cgi-bin/config/settings.ini");
+Labyrinth::Globals::LoadSettings("rssfeeds.ini");
 Labyrinth::Globals::DBConnect();
 
 # Diary Entries

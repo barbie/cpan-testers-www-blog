@@ -9,6 +9,7 @@ Changes for the CPAN Testers Blog website
         - added LICENSE file.
         - added nofollow link attributes to iheart.js.
         - upgraded comment management.
+        - extend allowable CMS HTML tags.
 
 1.07    2014-02-16
         - removed unused files.

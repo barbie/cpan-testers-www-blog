@@ -3,7 +3,7 @@ package CPAN::Testers::WWW::Blog;
 use warnings;
 use strict;
 
-our $VERSION = '1.07';
+our $VERSION = '1.08';
 
 1;
 

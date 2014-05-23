@@ -1,6 +1,7 @@
 Changes for the CPAN Testers Blog website
 =========================================
 
+1.08    2014-05-23
         - upgrade to Labyrinth-5.21.
         - upgrade to Labyrinth-Plugin-Core-5.15.
         - upgrade to Labyrinth-Plugin-Articles-Diary 1.05.

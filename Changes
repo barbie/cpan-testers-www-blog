@@ -1,6 +1,8 @@
 Changes for the CPAN Testers Blog website
 =========================================
 
+        - fixed license fields in META.json to be lists.
+
 1.08    2014-05-23
         - upgrade to Labyrinth-5.21.
         - upgrade to Labyrinth-Plugin-Core-5.15.

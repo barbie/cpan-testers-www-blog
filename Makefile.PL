@@ -8,7 +8,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     AUTHOR              => 'Barbie <barbie@cpan.org>',
-    NAME                => 'CPAN-Testers-WWW-Blog',
+    NAME                => 'CPAN::Testers::WWW::Blog',
     VERSION_FROM        => 'lib/CPAN/Testers/WWW/Blog.pm',
     ABSTRACT            => 'The CPAN Testers Blog website',
     NO_META             => 1,

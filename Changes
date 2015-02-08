@@ -2,6 +2,7 @@ Changes for the CPAN Testers Blog website
 =========================================
 
         - upgrade to Labyrinth-5.24.
+        - removed Perl promotions links.
 
 1.09    2014-09-21
         - fixed license fields in META.json to be lists.

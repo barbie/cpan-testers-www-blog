@@ -1,6 +1,7 @@
 Changes for the CPAN Testers Blog website
 =========================================
 
+1.10    2015-02-09
         - upgrade to Labyrinth-5.24.
         - removed Perl promotions links.
         - added Admin site links.

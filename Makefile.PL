@@ -18,7 +18,7 @@ WriteMakefile(
         'Labyrinth'                             => '5.24',
         'Labyrinth::DIUtils::ImageMagick'       => '5.04',
         'Labyrinth::Plugin::Core'               => '5.15',
-        'Labyrinth::Plugin::CPAN                => '3.55',
+        'Labyrinth::Plugin::CPAN'               => '3.55',
         'Labyrinth::Plugin::Articles::Diary'    => '1.05',
         'Labyrinth::Plugin::Event'              => '1.04',
 

@@ -22,7 +22,7 @@
 
   <link rel="stylesheet" type="text/css" media="screen,projection,print" href="/css/layout-min.css" />
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
   [% INCLUDE "public/analytics.html" %]
 
@@ -42,6 +42,9 @@
 </head>
 
 <body>
+
+  <div class="wrapper">
+       <div class="ribbon-wrapper-green"><div class="ribbon-green"><a href="http://iheart.cpantesters.org">I <span class="alert">&hearts;</span> CPAN Testers</a></div></div>
 
   <!-- Main Page Container -->
   <div class="page-container">
@@ -98,6 +101,10 @@
       <!-- B.1 MAIN CONTENT -->
       <div class="main-content">
 
+        <div id="iheart-banner">
+        [% INCLUDE "public/banner.html" %]
+        </div>
+
         <div id="tooltip" class="update20110712">
           <p><strong>Upgrade Notice</strong></p>
           <p>The CPAN Testers Blog site has been upgraded since you last accessed the site.
@@ -123,7 +130,17 @@
 
   <p class="footnote"><a href="/article/terms" title="Terms &amp; Conditions">Terms &amp; Conditions</a></p>
 
+  </div>
+
   <script type="text/javascript" src="/js/iheart.js"></script>
+<script>
+    $().ready(function () {
+        $('.sponsor').on('click', function () {
+            $(this).find('img.logo').toggle();
+            $(this).find('div.info').toggle();
+        });
+    });
+</script>
 
 </body>
 </html>

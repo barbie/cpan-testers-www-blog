@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                CPAN-Testers-WWW-Blog
-version:             1.10
+version:             1.11
 abstract:            The CPAN Testers Blog website
 author:
   - Barbie <barbie@cpan.org>
@@ -11,9 +11,9 @@ installdirs:         site
 
 requires:
   perl:                               5.006
-  Labyrinth:                          5.24
+  Labyrinth:                          5.32
   Labyrinth::DIUtils::ImageMagick:    5.04
-  Labyrinth::Plugin::Core:            5.15
+  Labyrinth::Plugin::Core:            5.19
   Labyrinth::Plugin::Articles::Diary: 1.05
   Labyrinth::Plugin::Event:           1.04
 recommends:

@@ -28,7 +28,7 @@ build_requires:
 provides:
   CPAN::Testers::WWW::Blog:
     file:     lib/CPAN/Testers/WWW/Blog.pm
-    version:  1.10
+    version:  1.11
 
 no_index:
   directory:

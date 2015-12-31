@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                CPAN-Testers-WWW-Blog
-version:             1.12
+version:             1.13
 abstract:            The CPAN Testers Blog website
 author:
   - Barbie <barbie@cpan.org>
@@ -29,7 +29,7 @@ build_requires:
 provides:
   CPAN::Testers::WWW::Blog:
     file:     lib/CPAN/Testers/WWW/Blog.pm
-    version:  1.12
+    version:  1.13
 
 no_index:
   directory:

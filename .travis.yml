@@ -15,6 +15,8 @@ os: linux
 dist: trusty
 
 before_install:
-  cpanm -n Devel::Cover::Report::Coveralls
+  - cpanm -n Devel::Cover::Report::Coveralls
+  - sudo apt-get install -y perlmagick libpng-dev libpng12-0
+
 script:
   perl Makefile.PL && make && cover -test -report coveralls
